@@ -1,7 +1,9 @@
 extends Area2D
+class_name Ingredient
 #draggable ingredient that player can drop on pan
 
 @export var ingredient_name: String = "generic_ingredient"
+@export var ingredient_state: IngredientState = IngredientState.FRESH
 @onready var sprite: Sprite2D = $Sprite2D
 
 enum IngredientState { #states for ingredients
