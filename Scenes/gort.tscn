@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://onkxowxq311w"]
+[gd_scene load_steps=6 format=3 uid="uid://onkxowxq311w"]
 
 [ext_resource type="Texture2D" uid="uid://rjed8v0r76s1" path="res://Assets/Sprites/Gort/Gort.png" id="1_vej8r"]
 [ext_resource type="Texture2D" uid="uid://b46nuqdsi72nc" path="res://Assets/Sprites/Gort/Gort walk.png" id="2_31evh"]
 [ext_resource type="Script" uid="uid://b23mkrikqw85c" path="res://Scripts/gort.gd" id="2_78agy"]
+[ext_resource type="FontFile" uid="uid://cksnw3iylvwaj" path="res://Assets/Fonts/Ruler 9.ttf" id="4_31evh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e40sh"]
 animations = [{
@@ -42,5 +43,5 @@ layout_mode = 0
 offset_left = 18.0
 offset_top = 34.0
 offset_right = 192.0
-offset_bottom = 262.0
-text = "Hello"
+offset_bottom = 309.0
+theme_override_fonts/normal_font = ExtResource("4_31evh")

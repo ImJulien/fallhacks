@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://be5anygymy1g0"]
+
+[ext_resource type="Script" uid="uid://efwox652trlb" path="res://Scripts/ingredient.gd" id="1_bnlwl"]
+[ext_resource type="Texture2D" uid="uid://ddwcr1l2n8whe" path="res://icon.svg" id="1_ho7p5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnlwl"]
+size = Vector2(128, 128)
+
+[node name="Tomato" type="Area2D"]
+script = ExtResource("1_bnlwl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_ho7p5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("RectangleShape2D_bnlwl")
