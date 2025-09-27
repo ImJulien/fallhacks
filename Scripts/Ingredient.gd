@@ -1,5 +1,4 @@
 extends Area2D
-class_name Ingredient
 #draggable ingredient that player can drop on pan
 
 @export var ingredient_name: String = "generic_ingredient"
