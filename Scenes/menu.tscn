@@ -1,14 +1,35 @@
-[gd_scene load_steps=7 format=3 uid="uid://kl1u2wqijagf"]
+[gd_scene load_steps=25 format=3 uid="uid://kl1u2wqijagf"]
 
 [ext_resource type="Script" uid="uid://dqmr0hcxhafeu" path="res://Scripts/menu.gd" id="1_con2f"]
 [ext_resource type="FontFile" uid="uid://cksnw3iylvwaj" path="res://Assets/Fonts/Ruler 9.ttf" id="2_cayip"]
-[ext_resource type="Texture2D" uid="uid://d3mvo5qufnpfs" path="res://Assets/Sprites/Topdesk/Topdesk1.png" id="4_h63v2"]
-[ext_resource type="Texture2D" uid="uid://bvcqungaevde4" path="res://Assets/Sprites/Topdesk/Topdesk2.png" id="5_l6llh"]
-[ext_resource type="Texture2D" uid="uid://ck0e4ushb6uw2" path="res://Assets/Sprites/Topdesk/Topdesk3.png" id="6_ocger"]
+[ext_resource type="Texture2D" uid="uid://ctpsdnwagl04u" path="res://Assets/Sprites/Topdesk/tile000.png" id="3_owyel"]
+[ext_resource type="Texture2D" uid="uid://b0884s3cpskyc" path="res://Assets/Sprites/Topdesk/tile001.png" id="4_h63v2"]
+[ext_resource type="Texture2D" uid="uid://cd71pw0btjqmx" path="res://Assets/Sprites/Topdesk/tile002.png" id="5_l6llh"]
+[ext_resource type="Texture2D" uid="uid://bgeujkamkvxkh" path="res://Assets/Sprites/Topdesk/tile003.png" id="6_ocger"]
+[ext_resource type="Texture2D" uid="uid://6y8ju8gvga8s" path="res://Assets/Sprites/Topdesk/tile004.png" id="7_i37ye"]
+[ext_resource type="Texture2D" uid="uid://cm5gt3h3wwtun" path="res://Assets/Sprites/Topdesk/tile005.png" id="8_jbv25"]
+[ext_resource type="Texture2D" uid="uid://cg8op8sxnpalc" path="res://Assets/Sprites/Topdesk/tile006.png" id="9_nakb8"]
+[ext_resource type="Texture2D" uid="uid://boc4d6olxjx2v" path="res://Assets/Sprites/Topdesk/tile007.png" id="10_pde1v"]
+[ext_resource type="Texture2D" uid="uid://drdavwhy14set" path="res://Assets/Sprites/Topdesk/tile008.png" id="11_747ic"]
+[ext_resource type="Texture2D" uid="uid://dqut4mbu8qxsg" path="res://Assets/Sprites/Topdesk/tile009.png" id="12_x0760"]
+[ext_resource type="Texture2D" uid="uid://bjwjwhw2nxso8" path="res://Assets/Sprites/Topdesk/tile010.png" id="13_lvy56"]
+[ext_resource type="Texture2D" uid="uid://dicy8asa12qpm" path="res://Assets/Sprites/Topdesk/tile011.png" id="14_48g0d"]
+[ext_resource type="Texture2D" uid="uid://bxe0avbhsusma" path="res://Assets/Sprites/Topdesk/tile012.png" id="15_ygxe1"]
+[ext_resource type="Texture2D" uid="uid://symo5cwlhkot" path="res://Assets/Sprites/Topdesk/tile013.png" id="16_0idt7"]
+[ext_resource type="Texture2D" uid="uid://b2pg23k2o0vx5" path="res://Assets/Sprites/Topdesk/tile014.png" id="17_ki2a1"]
+[ext_resource type="Texture2D" uid="uid://exii66obwluq" path="res://Assets/Sprites/Topdesk/tile015.png" id="18_flyo0"]
+[ext_resource type="Texture2D" uid="uid://dppnima4htw5" path="res://Assets/Sprites/Topdesk/tile016.png" id="19_4dr7d"]
+[ext_resource type="Texture2D" uid="uid://bylvxck6is0wf" path="res://Assets/Sprites/Topdesk/tile017.png" id="20_8cy2d"]
+[ext_resource type="Texture2D" uid="uid://dvhyu7udctb66" path="res://Assets/Sprites/Topdesk/tile018.png" id="21_lx18h"]
+[ext_resource type="Texture2D" uid="uid://bd1mtc0odqnn6" path="res://Assets/Sprites/Topdesk/Background.png" id="22_h63v2"]
+[ext_resource type="Texture2D" uid="uid://bfhiy3y7dpxi" path="res://Assets/Sprites/Topdesk/tile019.png" id="22_mucp4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cayip"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_owyel")
+}, {
 "duration": 1.0,
 "texture": ExtResource("4_h63v2")
 }, {
@@ -17,14 +38,57 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_ocger")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i37ye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jbv25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nakb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pde1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_747ic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_x0760")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_lvy56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_48g0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ygxe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0idt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ki2a1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_flyo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4dr7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8cy2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_lx18h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mucp4")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"start",
 "speed": 5.0
 }]
 
@@ -36,6 +100,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_con2f")
+
+[node name="TableUp" type="AnimatedSprite2D" parent="."]
+z_index = -1
+position = Vector2(320, 180)
+sprite_frames = SubResource("SpriteFrames_cayip")
+frame_progress = 0.71218646
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(320, 180)
+texture = ExtResource("22_h63v2")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 z_index = 10
@@ -177,12 +252,6 @@ layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("2_cayip")
 text = "Changelog"
 fit_content = true
-
-[node name="TableUp" type="AnimatedSprite2D" parent="."]
-z_index = -1
-position = Vector2(320, 180)
-sprite_frames = SubResource("SpriteFrames_cayip")
-frame_progress = 0.5194603
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var camera := $Camera2D
+@onready var desk = $TableUp
 var camera_up_position: float
 var camera_down_position: float
 
@@ -9,6 +10,7 @@ func _ready():
 	camera_up_position = camera.position.y
 	#down position is one screen height below
 	camera_down_position = camera_up_position + get_viewport().get_visible_rect().size.y
+	desk.play()
 
 func _process(_delta):
 	if Input.is_action_just_pressed("Down"):

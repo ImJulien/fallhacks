@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjsy1nvst631y"
-path="res://.godot/imported/Scpoké.png-3b8531526725d1d958c900c17b11b06f.ctex"
+uid="uid://dk00ocgk2eisq"
+path="res://.godot/imported/TopDeskSprite.png-ac0e57d87d4163aded86d619d7138021.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Stove/Scpoké.png"
-dest_files=["res://.godot/imported/Scpoké.png-3b8531526725d1d958c900c17b11b06f.ctex"]
+source_file="res://Assets/Sprites/Topdesk/TopDeskSprite.png"
+dest_files=["res://.godot/imported/TopDeskSprite.png-ac0e57d87d4163aded86d619d7138021.ctex"]
 
 [params]
 
