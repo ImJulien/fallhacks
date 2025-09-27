@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cipccpfdtdt2b"]
+[gd_scene load_steps=2 format=3 uid="uid://oohj4g6vv40y"]
 
-[ext_resource type="Script" uid="uid://dqmr0hcxhafeu" path="res://scripts/menu.gd" id="1_con2f"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_con2f"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -41,8 +41,8 @@ text = "Quit"
 layout_mode = 0
 offset_left = 236.0
 offset_top = 48.0
-offset_right = 606.0
-offset_bottom = 377.0
+offset_right = 540.0
+offset_bottom = 276.0
 
 [node name="Margins" type="MarginContainer" parent="Windows"]
 layout_mode = 0
