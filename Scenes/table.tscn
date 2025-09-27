@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ctd57ff7486hk"]
+[gd_scene load_steps=15 format=3 uid="uid://b01i2a0u4gm43"]
 
 [ext_resource type="Texture2D" uid="uid://c1213f6ii571" path="res://Assets/Sprites/Coveyor Belt/tile000.png" id="2_4ntqo"]
 [ext_resource type="Texture2D" uid="uid://cv5atr4pgvekm" path="res://Assets/Sprites/Coveyor Belt/tile001.png" id="3_x0duj"]
@@ -10,9 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://coxfyoqryhb0t" path="res://Assets/Sprites/Coveyor Belt/tile007.png" id="9_k47uh"]
 [ext_resource type="Texture2D" uid="uid://bf11gmecx0put" path="res://Assets/Sprites/Coveyor Belt/tile008.png" id="10_xhfwg"]
 [ext_resource type="PackedScene" uid="uid://be5anygymy1g0" path="res://Scenes/tomato.tscn" id="11_filji"]
-[ext_resource type="Texture2D" uid="uid://d0x1jf08b6e2e" path="res://Assets/Sprites/Botdesk/Bowl.png" id="12_filji"]
+[ext_resource type="Texture2D" uid="uid://fa5q0m6ypl5v" path="res://Assets/Sprites/Botdesk/DownTable.png" id="12_filji"]
 [ext_resource type="PackedScene" uid="uid://c0v4xyhafnvif" path="res://Scenes/pan.tscn" id="12_llvxf"]
-[ext_resource type="Script" uid="uid://csgq52x4uxvdp" path="res://Scenes/bowl.gd" id="12_oi710"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5kx35"]
 animations = [{
@@ -51,15 +50,11 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3leha"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntqo"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_llvxf"]
-size = Vector2(85.13127, 55.926544)
-
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1.0102042, 1.0013145)
 
 [node name="Conveyor" type="Node2D" parent="."]
+position = Vector2(-4.949495, 0)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Conveyor"]
 position = Vector2(555.3333, 129.33032)
@@ -72,35 +67,16 @@ frame_progress = 0.8279592
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Conveyor/Area2D"]
 shape = SubResource("RectangleShape2D_3leha")
 
-[node name="PlatingArea" type="Node2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="PlatingArea"]
-
-[node name="Area2D" type="Area2D" parent="PlatingArea"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatingArea/Area2D"]
-shape = SubResource("RectangleShape2D_4ntqo")
-
 [node name="Tomato" parent="." instance=ExtResource("11_filji")]
 position = Vector2(212.82826, 107.85822)
 
 [node name="Pan" parent="." instance=ExtResource("12_llvxf")]
-position = Vector2(94.04039, 109.85558)
+position = Vector2(86.04039, 75.03282)
 
 [node name="Pan2" parent="." instance=ExtResource("12_llvxf")]
-position = Vector2(94.040405, 255.66393)
+position = Vector2(86.04039, 225.0328)
 
-[node name="Bowl" type="Node2D" parent="."]
-script = ExtResource("12_oi710")
-
-[node name="Sprite2D" type="Sprite2D" parent="Bowl"]
-position = Vector2(553.35345, 287.6219)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(316.94955, 179.99869)
 texture = ExtResource("12_filji")
-
-[node name="Area2D" type="Area2D" parent="Bowl"]
-scale = Vector2(1, 0.99999994)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bowl/Area2D"]
-position = Vector2(552.3635, 306.59702)
-scale = Vector2(1, 0.9999996)
-shape = SubResource("RectangleShape2D_llvxf")

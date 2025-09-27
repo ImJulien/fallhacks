@@ -82,3 +82,37 @@ func get_cooking_progress() -> float:
 	if not is_cooking:
 		return 0.0
 	return 1.0 - (cooking_timer.time_left / cooking_time)
+
+func remove_ingredient(ingredient_name: String):
+	if ingredients_in_pan.has(ingredient_name):
+		ingredients_in_pan.erase(ingredient_name)
+		print("Removed ", ingredient_name, " from pan")
+		
+		#if no ingredients left, stop cooking
+		if ingredients_in_pan.is_empty():
+			print("No ingredients left in pan, stopping cooking")
+			stop_cooking()
+
+func stop_cooking():
+	if is_cooking:
+		is_cooking = false
+		cooking_timer.stop()
+		print("Pan stopped cooking")
+
+func start_hover_cooking(ingredient_name: String, ingredient_node: Node):
+	print("Starting hover cooking for ", ingredient_name)
+	#don't add to ingredients_in_pan (this is temporary hover cooking)
+	#just tell the ingredient it's cooking
+	ingredient_node.set_cooking(true)
+	
+	#start a cooking timer if not already cooking
+	if not is_cooking:
+		is_cooking = true
+		cooking_timer.start()
+		cooking_started.emit()
+
+func stop_hover_cooking(ingredient_name: String):
+	print("Stopping hover cooking for ", ingredient_name)
+	#since hover cooking doesn't add to ingredients_in_pan, just stop the timer if no real ingredients
+	if ingredients_in_pan.is_empty() and is_cooking:
+		stop_cooking()
