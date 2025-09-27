@@ -17,45 +17,42 @@ color = Color(0.25637108, 0.12904409, 0, 1)
 [node name="Stove" type="Node2D" parent="."]
 
 [node name="Burner1" type="Node2D" parent="Stove"]
+position = Vector2(-23, 15)
 
 [node name="Sprite2D" type="Sprite2D" parent="Stove/Burner1"]
 position = Vector2(119, 69)
 texture = ExtResource("1_ix8et")
 
 [node name="Area2D" type="Area2D" parent="Stove/Burner1"]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stove/Burner1/Area2D"]
-visible = false
-position = Vector2(118, 70)
+position = Vector2(119, 69)
 shape = SubResource("CircleShape2D_4ppvu")
 
-[node name="Sprite2D" type="Sprite2D" parent="Stove"]
-
 [node name="Burner2" type="Node2D" parent="Stove"]
+position = Vector2(-23, 177)
 
 [node name="Sprite2D" type="Sprite2D" parent="Stove/Burner2"]
 position = Vector2(119, 69)
 texture = ExtResource("1_ix8et")
 
 [node name="Area2D" type="Area2D" parent="Stove/Burner2"]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stove/Burner2/Area2D"]
-visible = false
-position = Vector2(118, 70)
+position = Vector2(119, 70)
 shape = SubResource("CircleShape2D_4ppvu")
 
+[node name="Sprite2D" type="Sprite2D" parent="Stove"]
+
 [node name="Burner3" type="Node2D" parent="Stove"]
+position = Vector2(-23, 338)
 
 [node name="Sprite2D" type="Sprite2D" parent="Stove/Burner3"]
 position = Vector2(119, 69)
 texture = ExtResource("1_ix8et")
 
 [node name="Area2D" type="Area2D" parent="Stove/Burner3"]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stove/Burner3/Area2D"]
-visible = false
-position = Vector2(118, 70)
+position = Vector2(119, 69)
 shape = SubResource("CircleShape2D_4ppvu")
