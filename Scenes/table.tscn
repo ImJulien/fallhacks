@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://coxfyoqryhb0t" path="res://Assets/Sprites/Coveyor Belt/tile007.png" id="9_k47uh"]
 [ext_resource type="Texture2D" uid="uid://bf11gmecx0put" path="res://Assets/Sprites/Coveyor Belt/tile008.png" id="10_xhfwg"]
 [ext_resource type="PackedScene" uid="uid://be5anygymy1g0" path="res://Scenes/tomato.tscn" id="11_filji"]
+[ext_resource type="Texture2D" uid="uid://fa5q0m6ypl5v" path="res://Assets/Sprites/Botdesk/DownTable.png" id="12_filji"]
 [ext_resource type="PackedScene" uid="uid://c0v4xyhafnvif" path="res://Scenes/pan.tscn" id="12_llvxf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5kx35"]
@@ -49,12 +50,11 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3leha"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntqo"]
-
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1.0102042, 1.0013145)
 
 [node name="Conveyor" type="Node2D" parent="."]
+position = Vector2(-4.949495, 0)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Conveyor"]
 position = Vector2(555.3333, 129.33032)
@@ -67,20 +67,16 @@ frame_progress = 0.8279592
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Conveyor/Area2D"]
 shape = SubResource("RectangleShape2D_3leha")
 
-[node name="PlatingArea" type="Node2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="PlatingArea"]
-
-[node name="Area2D" type="Area2D" parent="PlatingArea"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatingArea/Area2D"]
-shape = SubResource("RectangleShape2D_4ntqo")
-
 [node name="Tomato" parent="." instance=ExtResource("11_filji")]
 position = Vector2(212.82826, 107.85822)
 
 [node name="Pan" parent="." instance=ExtResource("12_llvxf")]
-position = Vector2(94.04039, 109.85558)
+position = Vector2(86.04039, 75.03282)
 
 [node name="Pan2" parent="." instance=ExtResource("12_llvxf")]
-position = Vector2(94.040405, 255.66393)
+position = Vector2(86.04039, 225.0328)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(316.94955, 179.99869)
+texture = ExtResource("12_filji")

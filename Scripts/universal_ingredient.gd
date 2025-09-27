@@ -79,6 +79,15 @@ func start_drag(mouse_pos: Vector2):
 	#store the offset between ingredient and mouse
 	drag_offset = global_position - get_global_mouse_position()
 	z_index = 10  #bring to front
+	
+	#if ingredient is cooking, stop cooking immediately when dragging starts
+	if current_state == IngredientState.COOKING and connected_pan:
+		print("Ingredient was cooking, stopping cooking due to drag")
+		#tell the pan to stop cooking this ingredient
+		if connected_pan.has_method("remove_ingredient"):
+			connected_pan.remove_ingredient(ingredient_name)
+		stop_cooking()
+	
 	print("Dragging started, is_dragging: ", is_dragging, " z_index: ", z_index)
 
 func stop_drag():
@@ -156,15 +165,45 @@ func update_hover_highlight():
 	
 	var results = space_state.intersect_point(query)
 	var over_pan = false
+	var pan_node = null
 	
 	for result in results:
 		var collider = result.collider
 		if collider != self and collider.has_method("receive_ingredient"):
 			over_pan = true
+			pan_node = collider
 			print("Hovering over pan: ", collider.name)  #debug
 			break
 	
-	#only highlight fresh ingredients green, keep cooked/burnt ingredients their color
+	#handle cooking while hovering over pan
+	if over_pan and pan_node:
+		#if ingredient can cook (fresh or was previously cooking) and not burnt
+		if (current_state == IngredientState.FRESH or current_state == IngredientState.COOKING) and not is_burnt_food:
+			#start cooking if not already connected to this pan
+			if connected_pan != pan_node:
+				#disconnect from previous pan if any
+				if connected_pan and connected_pan.has_signal("cooking_finished"):
+					if connected_pan.cooking_finished.is_connected(_on_cooking_finished):
+						connected_pan.cooking_finished.disconnect(_on_cooking_finished)
+				
+				#connect to new pan and start cooking
+				connected_pan = pan_node
+				if pan_node.has_method("start_hover_cooking"):
+					pan_node.start_hover_cooking(ingredient_name, self)
+				else:
+					#just set cooking state
+					set_cooking(true)
+				pan_node.cooking_finished.connect(_on_cooking_finished)
+				print("Started hover cooking on ", pan_node.name)
+	else:
+		#not over pan - stop cooking if we were hover cooking
+		if connected_pan and current_state == IngredientState.COOKING:
+			print("Left pan area, stopping hover cooking")
+			if connected_pan.has_method("stop_hover_cooking"):
+				connected_pan.stop_hover_cooking(ingredient_name)
+			stop_cooking()
+	
+	#visual highlighting
 	if over_pan and current_state == IngredientState.FRESH:
 		modulate = Color.GREEN
 		print("Highlighting ingredient green")
