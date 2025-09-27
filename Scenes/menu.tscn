@@ -41,8 +41,8 @@ text = "Quit"
 layout_mode = 0
 offset_left = 236.0
 offset_top = 48.0
-offset_right = 540.0
-offset_bottom = 276.0
+offset_right = 606.0
+offset_bottom = 377.0
 
 [node name="Margins" type="MarginContainer" parent="Windows"]
 layout_mode = 0
