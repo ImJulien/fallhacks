@@ -1,17 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0v4xyhafnvif"]
 
 [ext_resource type="Script" uid="uid://bmbk867g34us7" path="res://Scripts/pan.gd" id="1_ibiup"]
-[ext_resource type="Texture2D" uid="uid://ddwcr1l2n8whe" path="res://icon.svg" id="1_namub"]
+[ext_resource type="Texture2D" uid="uid://bayqhsts7mlue" path="res://Assets/Sprites/Stove/stovetop.png" id="2_ibiup"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibiup"]
-size = Vector2(129, 128)
+size = Vector2(90, 90)
 
 [node name="Pan" type="Area2D"]
 script = ExtResource("1_ibiup")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_namub")
+texture = ExtResource("2_ibiup")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_ibiup")

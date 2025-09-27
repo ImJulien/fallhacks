@@ -11,3 +11,6 @@ position = Vector2(295, 186)
 
 [node name="Pan" parent="." instance=ExtResource("1_r5l72")]
 position = Vector2(171, 191)
+
+[node name="Pan2" parent="." instance=ExtResource("1_r5l72")]
+position = Vector2(173, 67)

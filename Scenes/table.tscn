@@ -1,6 +1,5 @@
-[gd_scene load_steps=15 format=3 uid="uid://ctd57ff7486hk"]
+[gd_scene load_steps=15 format=3 uid="uid://b01i2a0u4gm43"]
 
-[ext_resource type="Texture2D" uid="uid://bayqhsts7mlue" path="res://Assets/Sprites/Stove/stovetop.png" id="1_ix8et"]
 [ext_resource type="Texture2D" uid="uid://c1213f6ii571" path="res://Assets/Sprites/Coveyor Belt/tile000.png" id="2_4ntqo"]
 [ext_resource type="Texture2D" uid="uid://cv5atr4pgvekm" path="res://Assets/Sprites/Coveyor Belt/tile001.png" id="3_x0duj"]
 [ext_resource type="Texture2D" uid="uid://bufsaevehu74l" path="res://Assets/Sprites/Coveyor Belt/tile002.png" id="4_filji"]
@@ -10,9 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dyijcwuyxoj83" path="res://Assets/Sprites/Coveyor Belt/tile006.png" id="8_bxtnr"]
 [ext_resource type="Texture2D" uid="uid://coxfyoqryhb0t" path="res://Assets/Sprites/Coveyor Belt/tile007.png" id="9_k47uh"]
 [ext_resource type="Texture2D" uid="uid://bf11gmecx0put" path="res://Assets/Sprites/Coveyor Belt/tile008.png" id="10_xhfwg"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_4ppvu"]
-radius = 53.0
+[ext_resource type="PackedScene" uid="uid://be5anygymy1g0" path="res://Scenes/tomato.tscn" id="11_filji"]
+[ext_resource type="PackedScene" uid="uid://c0v4xyhafnvif" path="res://Scenes/pan.tscn" id="12_llvxf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5kx35"]
 animations = [{
@@ -56,46 +54,6 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1.0102042, 1.0013145)
 
-[node name="tbaleplaceholder" type="ColorRect" parent="."]
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 704.0
-offset_bottom = 515.0
-scale = Vector2(0.90322137, 0.7079381)
-color = Color(0.25637108, 0.12904409, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Stove" type="Node2D" parent="."]
-
-[node name="Burner1" type="Node2D" parent="Stove"]
-position = Vector2(-36.62626, 37.950115)
-
-[node name="Sprite2D" type="Sprite2D" parent="Stove/Burner1"]
-position = Vector2(119, 69)
-texture = ExtResource("1_ix8et")
-
-[node name="Area2D" type="Area2D" parent="Stove/Burner1"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stove/Burner1/Area2D"]
-position = Vector2(119, 69)
-shape = SubResource("CircleShape2D_4ppvu")
-
-[node name="Burner2" type="Node2D" parent="Stove"]
-position = Vector2(-35.63636, 190.98161)
-
-[node name="Sprite2D" type="Sprite2D" parent="Stove/Burner2"]
-position = Vector2(119, 69)
-texture = ExtResource("1_ix8et")
-
-[node name="Area2D" type="Area2D" parent="Stove/Burner2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stove/Burner2/Area2D"]
-position = Vector2(119, 70)
-shape = SubResource("CircleShape2D_4ppvu")
-
-[node name="Sprite2D" type="Sprite2D" parent="Stove"]
-position = Vector2(-12.636358, 13.98162)
-
 [node name="Conveyor" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Conveyor"]
@@ -117,3 +75,12 @@ shape = SubResource("RectangleShape2D_3leha")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlatingArea/Area2D"]
 shape = SubResource("RectangleShape2D_4ntqo")
+
+[node name="Tomato" parent="." instance=ExtResource("11_filji")]
+position = Vector2(212.82826, 107.85822)
+
+[node name="Pan" parent="." instance=ExtResource("12_llvxf")]
+position = Vector2(83.15152, 106.85953)
+
+[node name="Pan2" parent="." instance=ExtResource("12_llvxf")]
+position = Vector2(83.15151, 259.65872)

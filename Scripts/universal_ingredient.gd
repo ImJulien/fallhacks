@@ -22,6 +22,19 @@ var original_position: Vector2
 func _ready():
 	original_position = global_position
 	input_event.connect(_on_input_event)
+	
+	# Debug: Check if ingredient is set up correctly
+	print("=== INGREDIENT SETUP DEBUG ===")
+	print("Ingredient name: ", ingredient_name)
+	print("Has CollisionShape2D: ", get_node_or_null("CollisionShape2D") != null)
+	print("Input pickable: ", input_pickable)
+	print("Position: ", global_position)
+	print("Z-index: ", z_index)
+	print("Script attached: ", get_script() != null)
+	
+	# Force this ingredient to have higher priority
+	z_index = 100
+	input_pickable = true
 
 func change_state(new_state: IngredientState, reason: String = ""):
 	var old_state_name = get_state_name(current_state)
@@ -47,18 +60,24 @@ func get_state_name(state: IngredientState) -> String:
 
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int):
+	print("Ingredient ", ingredient_name, " received input: ", event)
 	#you can drag ingredients in any state
 	if event is InputEventMouseButton:
+		print("Mouse button event: ", event.button_index, " pressed: ", event.pressed)
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
+				print("Starting drag for ", ingredient_name)
 				start_drag(event.global_position)
 			else:
+				print("Stopping drag for ", ingredient_name)
 				stop_drag()
 
 func start_drag(mouse_pos: Vector2):
+	print("start_drag called for ", ingredient_name, " at mouse pos: ", mouse_pos)
 	is_dragging = true
 	drag_offset = global_position - mouse_pos
-	print("started dragging")
+	z_index = 10  # Bring to front
+	print("Dragging started, is_dragging: ", is_dragging, " z_index: ", z_index)
 
 func stop_drag():
 	is_dragging = false
