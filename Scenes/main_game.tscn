@@ -1,10 +1,43 @@
-[gd_scene format=3 uid="uid://c2d3d0438e25a"]
+[gd_scene load_steps=2 format=3 uid="uid://c2d3d0438e25a"]
+
+[ext_resource type="Script" uid="uid://bcpdpierj8lt4" path="res://Scripts/main_game.gd" id="1_l756w"]
 
 [node name="MainGame" type="Node2D"]
+script = ExtResource("1_l756w")
 
 [node name="tbaleplaceholder" type="ColorRect" parent="."]
-offset_left = -25.0
 offset_top = 250.0
-offset_right = 678.0
-offset_bottom = 402.0
+offset_right = 703.0
+offset_bottom = 764.0
 color = Color(0.25637108, 0.12904409, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="tbaleplaceholder"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 30.0
+offset_right = 205.0
+offset_bottom = 86.0
+
+[node name="ColorRect2" type="ColorRect" parent="tbaleplaceholder"]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 166.0
+offset_right = 394.0
+offset_bottom = 222.0
+color = Color(0.756602, 0.42018205, 0.7581832, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="tbaleplaceholder"]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 260.0
+offset_right = 611.0
+offset_bottom = 316.0
+color = Color(0.22312784, 0.6832753, 0.61487883, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="tbaleplaceholder"]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 394.0
+offset_right = 403.0
+offset_bottom = 450.0
+color = Color(0.756602, 0.42018205, 0.7581832, 1)
