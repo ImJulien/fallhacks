@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2d3d0438e25a"]
+[gd_scene load_steps=5 format=3 uid="uid://c2d3d0438e25a"]
 
 [ext_resource type="Script" uid="uid://bcpdpierj8lt4" path="res://Scripts/main_game.gd" id="1_l756w"]
 [ext_resource type="PackedScene" uid="uid://onkxowxq311w" path="res://Scenes/gort.tscn" id="2_pu3va"]
 [ext_resource type="PackedScene" uid="uid://c0v4xyhafnvif" path="res://Scenes/pan.tscn" id="3_6j5ir"]
-[ext_resource type="Script" uid="uid://efwox652trlb" path="res://Scripts/Ingredient.gd" id="4_bb2iq"]
 [ext_resource type="PackedScene" uid="uid://be5anygymy1g0" path="res://Scenes/tomato.tscn" id="4_mgc0q"]
 
 [node name="MainGame" type="Node2D"]
@@ -51,7 +50,6 @@ position = Vector2(111, 201)
 
 [node name="Tomato" parent="tbaleplaceholder" instance=ExtResource("4_mgc0q")]
 position = Vector2(329, 175)
-script = ExtResource("4_bb2iq")
 
 [node name="Gort" parent="." instance=ExtResource("2_pu3va")]
 z_index = -1
