@@ -1,94 +1,26 @@
-[gd_scene load_steps=24 format=3 uid="uid://kl1u2wqijagf"]
+[gd_scene load_steps=7 format=3 uid="uid://kl1u2wqijagf"]
 
 [ext_resource type="Script" uid="uid://dqmr0hcxhafeu" path="res://Scripts/menu.gd" id="1_con2f"]
 [ext_resource type="FontFile" uid="uid://cksnw3iylvwaj" path="res://Assets/Fonts/Ruler 9.ttf" id="2_cayip"]
 [ext_resource type="Texture2D" uid="uid://d3mvo5qufnpfs" path="res://Assets/Sprites/Topdesk/Topdesk1.png" id="4_h63v2"]
 [ext_resource type="Texture2D" uid="uid://bvcqungaevde4" path="res://Assets/Sprites/Topdesk/Topdesk2.png" id="5_l6llh"]
 [ext_resource type="Texture2D" uid="uid://ck0e4ushb6uw2" path="res://Assets/Sprites/Topdesk/Topdesk3.png" id="6_ocger"]
-[ext_resource type="Texture2D" uid="uid://kbwjpftahq6y" path="res://Assets/Sprites/Topdesk/Topdesk4.png" id="7_i37ye"]
-[ext_resource type="Texture2D" uid="uid://dsn50wpr5rtdt" path="res://Assets/Sprites/Topdesk/Topdesk5.png" id="8_jbv25"]
-[ext_resource type="Texture2D" uid="uid://c2n2yyy1lhm3u" path="res://Assets/Sprites/Topdesk/Topdesk6.png" id="9_nakb8"]
-[ext_resource type="Texture2D" uid="uid://jihrss0brln5" path="res://Assets/Sprites/Topdesk/Topdesk7.png" id="10_pde1v"]
-[ext_resource type="Texture2D" uid="uid://dlr5y0fcsdfgd" path="res://Assets/Sprites/Topdesk/Topdesk8.png" id="11_747ic"]
-[ext_resource type="Texture2D" uid="uid://bexc2qku30ars" path="res://Assets/Sprites/Topdesk/Topdesk9.png" id="12_x0760"]
-[ext_resource type="Texture2D" uid="uid://bnh43223giyms" path="res://Assets/Sprites/Topdesk/Topdesk10.png" id="13_lvy56"]
-[ext_resource type="Texture2D" uid="uid://kwl5gbyyogrd" path="res://Assets/Sprites/Topdesk/Topdesk11.png" id="14_48g0d"]
-[ext_resource type="Texture2D" uid="uid://cr4tawar5jsvv" path="res://Assets/Sprites/Topdesk/Topdesk12.png" id="15_ygxe1"]
-[ext_resource type="Texture2D" uid="uid://ckt5qp5q3nxdn" path="res://Assets/Sprites/Topdesk/Topdesk13.png" id="16_0idt7"]
-[ext_resource type="Texture2D" uid="uid://cey4i563eu2qx" path="res://Assets/Sprites/Topdesk/Topdesk14.png" id="17_ki2a1"]
-[ext_resource type="Texture2D" uid="uid://dcfg7mic3of06" path="res://Assets/Sprites/Topdesk/Topdesk15.png" id="18_flyo0"]
-[ext_resource type="Texture2D" uid="uid://dg2r225rr5ul0" path="res://Assets/Sprites/Topdesk/Topdesk16.png" id="19_4dr7d"]
-[ext_resource type="Texture2D" uid="uid://cmfc186bmxijc" path="res://Assets/Sprites/Topdesk/Topdesk17.png" id="20_8cy2d"]
-[ext_resource type="Texture2D" uid="uid://7ext32pw4jeo" path="res://Assets/Sprites/Topdesk/Topdesk18.png" id="21_lx18h"]
-[ext_resource type="Texture2D" uid="uid://cgxf8pstdtmdb" path="res://Assets/Sprites/Topdesk/Topdesk19.png" id="22_mucp4"]
-[ext_resource type="Texture2D" uid="uid://di1md53w2jnek" path="res://Assets/Sprites/Topdesk/Topdesk20.png" id="23_v3l5l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cayip"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_jbv25")
+"texture": ExtResource("4_h63v2")
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_l6llh")
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_ocger")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_i37ye")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_nakb8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_h63v2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_pde1v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_747ic")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_x0760")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_lvy56")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_48g0d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_ygxe1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_0idt7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_ki2a1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_flyo0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_4dr7d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_8cy2d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_lx18h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_mucp4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_v3l5l")
 }],
-"loop": false,
+"loop": true,
 "name": &"default",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [],
 "loop": true,
@@ -250,6 +182,7 @@ fit_content = true
 z_index = -1
 position = Vector2(320, 180)
 sprite_frames = SubResource("SpriteFrames_cayip")
+frame_progress = 0.5194603
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

@@ -7,7 +7,7 @@ signal cooking_started
 signal cooking_finished
 
 @onready var cooking_timer: Timer = Timer.new()
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var animated_sprite: AnimatedSprite2D = $Sprite2D
 
 var is_cooking: bool = false
 var cooking_time: float = 3.0  #time to cook in seconds
@@ -19,6 +19,11 @@ func _ready():
 	cooking_timer.wait_time = cooking_time
 	cooking_timer.one_shot = true
 	cooking_timer.timeout.connect(_on_cooking_finished)
+	
+	#animation should autoplay from Inspector, but ensure it's playing
+	if animated_sprite and not animated_sprite.is_playing():
+		animated_sprite.play()  # play current animation
+		print("Pan animation started")
 
 #this function will be called by ingredients when they're actually dropped
 func receive_ingredient(ingredient_name: String, ingredient_node: Node):
@@ -54,6 +59,11 @@ func start_cooking():
 	is_cooking = true
 	cooking_started.emit()
 	cooking_timer.start()
+	
+	#play cooking animation
+	if animated_sprite:
+		animated_sprite.play("cooking")  # change to cooking animation
+		print("Pan cooking animation started")
 	
 	print("Started cooking: ", ingredients_in_pan)
 
@@ -97,6 +107,12 @@ func stop_cooking():
 	if is_cooking:
 		is_cooking = false
 		cooking_timer.stop()
+		
+		#return to idle animation
+		if animated_sprite:
+			animated_sprite.play("default")  # back to idle animation
+			print("Pan returned to idle animation")
+		
 		print("Pan stopped cooking")
 
 func start_hover_cooking(ingredient_name: String, ingredient_node: Node):

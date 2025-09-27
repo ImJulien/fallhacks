@@ -1,0 +1,62 @@
+[gd_scene load_steps=12 format=3 uid="uid://cqj4snpn33vy0"]
+
+[ext_resource type="Texture2D" uid="uid://c1213f6ii571" path="res://Assets/Sprites/Coveyor Belt/tile000.png" id="1_247tj"]
+[ext_resource type="Texture2D" uid="uid://cv5atr4pgvekm" path="res://Assets/Sprites/Coveyor Belt/tile001.png" id="2_g8mpg"]
+[ext_resource type="Texture2D" uid="uid://bufsaevehu74l" path="res://Assets/Sprites/Coveyor Belt/tile002.png" id="3_jhnkp"]
+[ext_resource type="Texture2D" uid="uid://dqp3ounds28gr" path="res://Assets/Sprites/Coveyor Belt/tile003.png" id="4_6nye6"]
+[ext_resource type="Texture2D" uid="uid://chvn0dflos4ms" path="res://Assets/Sprites/Coveyor Belt/tile004.png" id="5_2rft0"]
+[ext_resource type="Texture2D" uid="uid://ckjrttxpm0gc1" path="res://Assets/Sprites/Coveyor Belt/tile005.png" id="6_4q6us"]
+[ext_resource type="Texture2D" uid="uid://dyijcwuyxoj83" path="res://Assets/Sprites/Coveyor Belt/tile006.png" id="7_v812f"]
+[ext_resource type="Texture2D" uid="uid://coxfyoqryhb0t" path="res://Assets/Sprites/Coveyor Belt/tile007.png" id="8_5o50i"]
+[ext_resource type="Texture2D" uid="uid://bf11gmecx0put" path="res://Assets/Sprites/Coveyor Belt/tile008.png" id="9_g6a8n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5kx35"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_247tj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g8mpg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jhnkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6nye6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2rft0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4q6us")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v812f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5o50i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_g6a8n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3leha"]
+
+[node name="Conveyor" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(555.3333, 129.33032)
+scale = Vector2(0.8386641, 0.8842522)
+sprite_frames = SubResource("SpriteFrames_5kx35")
+frame = 2
+frame_progress = 0.8540876
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_3leha")
