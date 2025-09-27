@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> parent of 5426648 (table stuff)
 [gd_scene load_steps=3 format=3 uid="uid://ctd57ff7486hk"]
 
 [ext_resource type="Texture2D" uid="uid://bayqhsts7mlue" path="res://Assets/Sprites/Stove/stovetop.png" id="1_ix8et"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ppvu"]
 radius = 53.0
+<<<<<<< HEAD
 =======
 [gd_scene load_steps=0 format=3 uid="uid://hcf7nsub20q3"]
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 5426648 (table stuff)
 
 [node name="Node2D" type="Node2D"]
 
