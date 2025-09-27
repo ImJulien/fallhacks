@@ -247,6 +247,7 @@ text = "Changelog"
 fit_content = true
 
 [node name="TableUp" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(320, 180)
 sprite_frames = SubResource("SpriteFrames_cayip")
 
