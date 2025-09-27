@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://onkxowxq311w"]
+[gd_scene load_steps=5 format=3 uid="uid://o0w2innbb1id"]
 
 [ext_resource type="Texture2D" uid="uid://rjed8v0r76s1" path="res://Assets/Sprites/Gort/Gort.png" id="1_vej8r"]
 [ext_resource type="Texture2D" uid="uid://b46nuqdsi72nc" path="res://Assets/Sprites/Gort/Gort walk.png" id="2_31evh"]

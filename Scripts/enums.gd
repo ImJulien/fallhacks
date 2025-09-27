@@ -8,3 +8,8 @@ enum AggressionLevel {
 	VIOLENT, # At least 80% correct
 	HOSTILE # Must be correct
 }
+
+enum Customers {
+	GORT,
+	GORTICIA
+}
