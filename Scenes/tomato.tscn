@@ -7,6 +7,7 @@
 size = Vector2(128, 128)
 
 [node name="Tomato" type="Area2D"]
+z_index = 99
 script = ExtResource("1_bnlwl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

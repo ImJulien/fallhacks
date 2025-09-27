@@ -1,11 +1,24 @@
-[gd_scene load_steps=7 format=3 uid="uid://b01i2a0u4gm43"]
+[gd_scene load_steps=14 format=3 uid="uid://b01i2a0u4gm43"]
 
 [ext_resource type="PackedScene" uid="uid://cqj4snpn33vy0" path="res://Scenes/conveyor.tscn" id="1_5cpa6"]
-[ext_resource type="Texture2D" uid="uid://d0x1jf08b6e2e" path="res://Assets/Sprites/Botdesk/Sprite-0003.png" id="6_usajj"]
+[ext_resource type="Texture2D" path="res://Assets/Sprites/Botdesk/Bowl.png" id="6_usajj"]
+[ext_resource type="Script" uid="uid://br2x44jwlbbhy" path="res://Scenes/edamame_bucket.gd" id="7_usajj"]
+[ext_resource type="Script" uid="uid://g6yau4vwjyaq" path="res://Scenes/corn_bucket.gd" id="8_o4lkm"]
+[ext_resource type="Script" uid="uid://daq8nrkyvx8a0" path="res://Scenes/salmon_bucket.gd" id="9_4ntqo"]
+[ext_resource type="Script" uid="uid://bn38ulcwajx6x" path="res://Scenes/tuna_bucket.gd" id="10_x0duj"]
 [ext_resource type="PackedScene" uid="uid://be5anygymy1g0" path="res://Scenes/tomato.tscn" id="11_filji"]
 [ext_resource type="Texture2D" uid="uid://fa5q0m6ypl5v" path="res://Assets/Sprites/Botdesk/DownTable.png" id="12_filji"]
 [ext_resource type="PackedScene" uid="uid://c0v4xyhafnvif" path="res://Scenes/pan.tscn" id="12_llvxf"]
 [ext_resource type="PackedScene" uid="uid://1hstysymwkb6" path="res://Scenes/burner.tscn" id="13_llvxf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_usajj"]
+size = Vector2(75.23232, 52.93045)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntqo"]
+size = Vector2(71.27269, 65.913414)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0duj"]
+size = Vector2(69.29302, 64.91472)
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1.0102042, 1.0013145)
@@ -42,3 +55,49 @@ texture = ExtResource("12_filji")
 [node name="Bowl" type="Sprite2D" parent="."]
 position = Vector2(318.74744, 226.702)
 texture = ExtResource("6_usajj")
+
+[node name="EdamameBucket" type="Node2D" parent="."]
+script = ExtResource("7_usajj")
+
+[node name="Area2D" type="Area2D" parent="EdamameBucket"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EdamameBucket/Area2D"]
+position = Vector2(252.42421, 36.951412)
+scale = Vector2(1, 0.9999996)
+shape = SubResource("RectangleShape2D_usajj")
+
+[node name="CornBucket" type="Node2D" parent="."]
+position = Vector2(119.77777, 0)
+scale = Vector2(1, 0.99999994)
+script = ExtResource("8_o4lkm")
+
+[node name="Area2D" type="Area2D" parent="CornBucket"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornBucket/Area2D"]
+position = Vector2(252.42421, 36.951412)
+scale = Vector2(1, 0.9999996)
+shape = SubResource("RectangleShape2D_usajj")
+
+[node name="SalmonBucket" type="Node2D" parent="."]
+position = Vector2(-2.9696884, 87.884476)
+scale = Vector2(1, 0.99999994)
+script = ExtResource("9_4ntqo")
+
+[node name="Area2D" type="Area2D" parent="SalmonBucket"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SalmonBucket/Area2D"]
+position = Vector2(255.39389, 43.94226)
+scale = Vector2(1, 0.99999887)
+shape = SubResource("RectangleShape2D_4ntqo")
+
+[node name="TunaBucket" type="Node2D" parent="."]
+position = Vector2(119.77777, 0)
+scale = Vector2(1, 0.99999994)
+script = ExtResource("10_x0duj")
+
+[node name="Area2D" type="Area2D" parent="TunaBucket"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TunaBucket/Area2D"]
+position = Vector2(258.3635, 131.32738)
+scale = Vector2(1, 0.999999)
+shape = SubResource("RectangleShape2D_x0duj")
