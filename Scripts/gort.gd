@@ -16,7 +16,7 @@ func move_to_center():
 	#move Gort towards the center
 	move_tween.tween_property(self, "position:x", center.x, duration).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
-	#vertical bounce effect
+	#start bouncing the gyatt
 	bounce_tween.set_loops()  #loop the bounce until movement ends
 	bounce_tween.tween_property(self, "position:y", start_pos.y - bounce_height, duration / 4).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 	bounce_tween.tween_property(self, "position:y", start_pos.y, duration / 4).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN)
