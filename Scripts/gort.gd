@@ -3,8 +3,12 @@ extends AnimatedSprite2D
 @onready var move_tween := create_tween()
 @onready var bounce_tween := create_tween()
 
+var is_talking: bool = false
+
 func _ready() -> void:
 	play("walk")  #walk animation
+	#connect to dialogue finished signal
+	Dialogue.dialogue_finished.connect(_on_dialogue_finished)
 	move_to_center()
 
 func move_to_center():
@@ -27,4 +31,16 @@ func _on_bounce_complete():
 		bounce_tween.kill()  #stop bouncing the gyatt
 		play("idle")  #idle anim
 		#call the dialogue system singleton with desired aggression level
+		is_talking = true
 		Dialogue.start_dialogue(Enums.AggressionLevel.PASSIVE, Enums.Customers.GORT)
+
+func stop_talking():
+	is_talking = false
+	print("Gort stopped talking")
+
+func get_is_talking() -> bool:
+	return is_talking
+
+func _on_dialogue_finished():
+	is_talking = false
+	print("Gort finished talking (dialogue completed)")

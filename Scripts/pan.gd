@@ -14,7 +14,7 @@ var cooking_time: float = 3.0  #time to cook in seconds
 var ingredients_in_pan: Array = []
 
 func _ready():
-	# Set up timer
+	#set up timer
 	add_child(cooking_timer)
 	cooking_timer.wait_time = cooking_time
 	cooking_timer.one_shot = true

@@ -1,8 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://kl1u2wqijagf"]
+[gd_scene load_steps=24 format=3 uid="uid://kl1u2wqijagf"]
 
 [ext_resource type="Script" uid="uid://dqmr0hcxhafeu" path="res://Scripts/menu.gd" id="1_con2f"]
 [ext_resource type="FontFile" uid="uid://cksnw3iylvwaj" path="res://Assets/Fonts/Ruler 9.ttf" id="2_cayip"]
-[ext_resource type="Script" path="res://Scripts/brightness.gd" id="2_xhh6f"]
 [ext_resource type="Texture2D" uid="uid://d3mvo5qufnpfs" path="res://Assets/Sprites/Topdesk/Topdesk1.png" id="4_h63v2"]
 [ext_resource type="Texture2D" uid="uid://bvcqungaevde4" path="res://Assets/Sprites/Topdesk/Topdesk2.png" id="5_l6llh"]
 [ext_resource type="Texture2D" uid="uid://ck0e4ushb6uw2" path="res://Assets/Sprites/Topdesk/Topdesk3.png" id="6_ocger"]
@@ -235,7 +234,6 @@ layout_direction = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-script = ExtResource("2_xhh6f")
 
 [node name="ChangelogWindow" type="VBoxContainer" parent="Windows/Margins"]
 layout_mode = 2
@@ -247,6 +245,7 @@ text = "Changelog"
 fit_content = true
 
 [node name="TableUp" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(320, 180)
 sprite_frames = SubResource("SpriteFrames_cayip")
 
