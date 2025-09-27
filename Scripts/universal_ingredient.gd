@@ -112,6 +112,8 @@ func stop_drag():
 	for result in results:
 		var collider = result.collider
 		print("Collider: ", collider.name, " has receive_ingredient: ", collider.has_method("receive_ingredient"))  #debug
+		if collider != self and collider.name == 'Trash2D':
+			self.queue_free()
 		if collider != self and collider.has_method("receive_ingredient"):
 			#if ingredient is already burnt, just drop it without cooking
 			if is_burnt_food:
