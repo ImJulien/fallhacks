@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://cg8brjubuk02j"]
+[gd_scene load_steps=3 format=3 uid="uid://cg8brjubuk02j"]
 
-[node name="Title" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://ddwcr1l2n8whe" path="res://icon.svg" id="1_ekrfg"]
+[ext_resource type="Script" uid="uid://c182uhyxm51ic" path="res://Scripts/start_button.gd" id="2_fp2oq"]
+
+[node name="Title Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 247.0
+offset_right = 616.0
+offset_bottom = 376.0
+texture_normal = ExtResource("1_ekrfg")
+script = ExtResource("2_fp2oq")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
