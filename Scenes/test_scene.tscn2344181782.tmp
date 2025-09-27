@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://sj84e8uwfxy4"]
+
+[ext_resource type="PackedScene" uid="uid://c0v4xyhafnvif" path="res://Scenes/pan.tscn" id="1_r5l72"]
+[ext_resource type="PackedScene" uid="uid://be5anygymy1g0" path="res://Scenes/tomato.tscn" id="2_50ct6"]
+
+[node name="test_scene" type="Node2D"]
+
+[node name="Tomato" parent="." instance=ExtResource("2_50ct6")]
+z_index = 1
+position = Vector2(295, 186)
+
+[node name="Pan" parent="." instance=ExtResource("1_r5l72")]
+position = Vector2(171, 191)
