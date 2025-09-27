@@ -45,4 +45,4 @@ func _on_display_pressed():
 	display_tab.visible = true
 
 func _on_training_pressed():
-	get_tree().change_scene_to_file('res://scenes/world.tscn')
+	get_tree().change_scene_to_file('res://Scenes/main_game.tscn')

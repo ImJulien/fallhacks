@@ -1,20 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://onkxowxq311w"]
+[gd_scene load_steps=5 format=3 uid="uid://o0w2innbb1id"]
 
 [ext_resource type="Texture2D" uid="uid://rjed8v0r76s1" path="res://Assets/Sprites/Gort/Gort.png" id="1_vej8r"]
+[ext_resource type="Texture2D" uid="uid://b46nuqdsi72nc" path="res://Assets/Sprites/Gort/Gort walk.png" id="2_31evh"]
 [ext_resource type="Script" uid="uid://b23mkrikqw85c" path="res://Scripts/gort.gd" id="2_78agy"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_0m3m7"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_e40sh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_vej8r")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_31evh")
+}],
+"loop": true,
+"name": &"walk",
 "speed": 5.0
 }]
 
-[node name="Gort" type="AnimatedSprite2D"]
-position = Vector2(342, 180)
-sprite_frames = SubResource("SpriteFrames_0m3m7")
+[node name="Gort" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(770, 181)
+sprite_frames = SubResource("SpriteFrames_e40sh")
+animation = &"idle"
 script = ExtResource("2_78agy")
