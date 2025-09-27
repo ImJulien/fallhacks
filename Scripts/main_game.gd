@@ -15,11 +15,11 @@ func _process(_delta):
 		tween_down.tween_property(ui_container, "position:y", 250, 0.3).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 		tween_down.play()
 
-func calc_perf(ing_doneness: Array[float]):
+func calc_perf(ingredients: Array[Ingredient]):
 	# calculate the final perfection of the dish
 	# later expand to compare ingredients
 	var total_doneness: float = 0
-	for doneness in ing_doneness:
-		total_doneness += doneness
-	var avg_doneness: float = total_doneness / ing_doneness.size()
+	for ingredient in ingredients:
+		total_doneness += ingredient.doneness
+	var avg_doneness: float = total_doneness / ingredients.size()
 	return avg_doneness
