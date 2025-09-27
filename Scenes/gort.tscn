@@ -47,6 +47,9 @@ sprite_frames = SubResource("SpriteFrames_e40sh")
 animation = &"idle"
 script = ExtResource("2_78agy")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AnimatedSprite2D"]
+position = Vector2(-770, -181)
+
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0

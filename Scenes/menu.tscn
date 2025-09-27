@@ -106,6 +106,7 @@ grow_vertical = 2
 script = ExtResource("1_con2f")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+z_index = 10
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -135,6 +136,7 @@ theme_override_fonts/font = ExtResource("2_cayip")
 text = "Quit"
 
 [node name="Windows" type="Panel" parent="."]
+z_index = 10
 layout_mode = 0
 offset_left = 236.0
 offset_top = 48.0
