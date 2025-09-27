@@ -11,14 +11,13 @@ config_version=5
 [application]
 
 config/name="fallhacks"
-run/main_scene="uid://cg8brjubuk02j"
+run/main_scene="uid://cipccpfdtdt2b"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [autoload]
 
-brightness="*res://Scripts/brightness.gd"
 Dialogue="*res://Scripts/dialogue.gd"
 Enums="*res://Scripts/enums.gd"
 
