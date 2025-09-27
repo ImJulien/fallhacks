@@ -1,28 +1,29 @@
-[gd_scene load_steps=25 format=3 uid="uid://c2d3d0438e25a"]
+[gd_scene load_steps=26 format=3 uid="uid://c2d3d0438e25a"]
 
 [ext_resource type="Script" uid="uid://bcpdpierj8lt4" path="res://Scripts/main_game.gd" id="1_l756w"]
 [ext_resource type="PackedScene" uid="uid://onkxowxq311w" path="res://Scenes/gort.tscn" id="2_pu3va"]
 [ext_resource type="PackedScene" uid="uid://b01i2a0u4gm43" path="res://Scenes/table.tscn" id="3_0e3vx"]
-[ext_resource type="Texture2D" uid="uid://dsn50wpr5rtdt" path="res://Assets/Sprites/Topdesk/Topdesk5.png" id="4_ns551"]
-[ext_resource type="Texture2D" uid="uid://bvcqungaevde4" path="res://Assets/Sprites/Topdesk/Topdesk2.png" id="5_0bxlt"]
-[ext_resource type="Texture2D" uid="uid://ck0e4ushb6uw2" path="res://Assets/Sprites/Topdesk/Topdesk3.png" id="6_58qbg"]
-[ext_resource type="Texture2D" uid="uid://kbwjpftahq6y" path="res://Assets/Sprites/Topdesk/Topdesk4.png" id="7_gnsnf"]
-[ext_resource type="Texture2D" uid="uid://c2n2yyy1lhm3u" path="res://Assets/Sprites/Topdesk/Topdesk6.png" id="8_06qyo"]
-[ext_resource type="Texture2D" uid="uid://d3mvo5qufnpfs" path="res://Assets/Sprites/Topdesk/Topdesk1.png" id="9_3bgrf"]
-[ext_resource type="Texture2D" uid="uid://jihrss0brln5" path="res://Assets/Sprites/Topdesk/Topdesk7.png" id="10_vt8ts"]
-[ext_resource type="Texture2D" uid="uid://dlr5y0fcsdfgd" path="res://Assets/Sprites/Topdesk/Topdesk8.png" id="11_bbjgr"]
-[ext_resource type="Texture2D" uid="uid://bexc2qku30ars" path="res://Assets/Sprites/Topdesk/Topdesk9.png" id="12_jbexl"]
-[ext_resource type="Texture2D" uid="uid://bnh43223giyms" path="res://Assets/Sprites/Topdesk/Topdesk10.png" id="13_sgmg2"]
-[ext_resource type="Texture2D" uid="uid://kwl5gbyyogrd" path="res://Assets/Sprites/Topdesk/Topdesk11.png" id="14_g6spl"]
-[ext_resource type="Texture2D" uid="uid://cr4tawar5jsvv" path="res://Assets/Sprites/Topdesk/Topdesk12.png" id="15_q6b2w"]
-[ext_resource type="Texture2D" uid="uid://ckt5qp5q3nxdn" path="res://Assets/Sprites/Topdesk/Topdesk13.png" id="16_nkab7"]
-[ext_resource type="Texture2D" uid="uid://cey4i563eu2qx" path="res://Assets/Sprites/Topdesk/Topdesk14.png" id="17_e2wre"]
-[ext_resource type="Texture2D" uid="uid://dcfg7mic3of06" path="res://Assets/Sprites/Topdesk/Topdesk15.png" id="18_evlxa"]
-[ext_resource type="Texture2D" uid="uid://dg2r225rr5ul0" path="res://Assets/Sprites/Topdesk/Topdesk16.png" id="19_smxg7"]
-[ext_resource type="Texture2D" uid="uid://cmfc186bmxijc" path="res://Assets/Sprites/Topdesk/Topdesk17.png" id="20_7oxt3"]
-[ext_resource type="Texture2D" uid="uid://7ext32pw4jeo" path="res://Assets/Sprites/Topdesk/Topdesk18.png" id="21_n28rm"]
-[ext_resource type="Texture2D" uid="uid://cgxf8pstdtmdb" path="res://Assets/Sprites/Topdesk/Topdesk19.png" id="22_glqx2"]
-[ext_resource type="Texture2D" uid="uid://di1md53w2jnek" path="res://Assets/Sprites/Topdesk/Topdesk20.png" id="23_gy1md"]
+[ext_resource type="Texture2D" uid="uid://ctpsdnwagl04u" path="res://Assets/Sprites/Topdesk/tile000.png" id="4_ns551"]
+[ext_resource type="Texture2D" uid="uid://b0884s3cpskyc" path="res://Assets/Sprites/Topdesk/tile001.png" id="5_0bxlt"]
+[ext_resource type="Texture2D" uid="uid://cd71pw0btjqmx" path="res://Assets/Sprites/Topdesk/tile002.png" id="6_58qbg"]
+[ext_resource type="Texture2D" uid="uid://bgeujkamkvxkh" path="res://Assets/Sprites/Topdesk/tile003.png" id="7_gnsnf"]
+[ext_resource type="Texture2D" uid="uid://6y8ju8gvga8s" path="res://Assets/Sprites/Topdesk/tile004.png" id="8_06qyo"]
+[ext_resource type="Texture2D" uid="uid://cm5gt3h3wwtun" path="res://Assets/Sprites/Topdesk/tile005.png" id="9_3bgrf"]
+[ext_resource type="Texture2D" uid="uid://cg8op8sxnpalc" path="res://Assets/Sprites/Topdesk/tile006.png" id="10_vt8ts"]
+[ext_resource type="Texture2D" uid="uid://boc4d6olxjx2v" path="res://Assets/Sprites/Topdesk/tile007.png" id="11_bbjgr"]
+[ext_resource type="Texture2D" uid="uid://drdavwhy14set" path="res://Assets/Sprites/Topdesk/tile008.png" id="12_jbexl"]
+[ext_resource type="Texture2D" uid="uid://dqut4mbu8qxsg" path="res://Assets/Sprites/Topdesk/tile009.png" id="13_sgmg2"]
+[ext_resource type="Texture2D" uid="uid://bjwjwhw2nxso8" path="res://Assets/Sprites/Topdesk/tile010.png" id="14_g6spl"]
+[ext_resource type="Texture2D" uid="uid://dicy8asa12qpm" path="res://Assets/Sprites/Topdesk/tile011.png" id="15_q6b2w"]
+[ext_resource type="Texture2D" uid="uid://bxe0avbhsusma" path="res://Assets/Sprites/Topdesk/tile012.png" id="16_nkab7"]
+[ext_resource type="Texture2D" uid="uid://symo5cwlhkot" path="res://Assets/Sprites/Topdesk/tile013.png" id="17_e2wre"]
+[ext_resource type="Texture2D" uid="uid://b2pg23k2o0vx5" path="res://Assets/Sprites/Topdesk/tile014.png" id="18_evlxa"]
+[ext_resource type="Texture2D" uid="uid://exii66obwluq" path="res://Assets/Sprites/Topdesk/tile015.png" id="19_smxg7"]
+[ext_resource type="Texture2D" uid="uid://dppnima4htw5" path="res://Assets/Sprites/Topdesk/tile016.png" id="20_7oxt3"]
+[ext_resource type="Texture2D" uid="uid://bylvxck6is0wf" path="res://Assets/Sprites/Topdesk/tile017.png" id="21_n28rm"]
+[ext_resource type="Texture2D" uid="uid://dvhyu7udctb66" path="res://Assets/Sprites/Topdesk/tile018.png" id="22_glqx2"]
+[ext_resource type="Texture2D" uid="uid://bfhiy3y7dpxi" path="res://Assets/Sprites/Topdesk/tile019.png" id="23_gy1md"]
+[ext_resource type="Texture2D" uid="uid://bd1mtc0odqnn6" path="res://Assets/Sprites/Topdesk/Background.png" id="24_0bxlt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h0kr5"]
 animations = [{
@@ -113,3 +114,10 @@ position = Vector2(320, 180)
 z_index = -1
 position = Vector2(320, 180)
 sprite_frames = SubResource("SpriteFrames_h0kr5")
+frame = 19
+frame_progress = 1.0
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(320, 180)
+texture = ExtResource("24_0bxlt")
