@@ -2,6 +2,8 @@ extends AnimatedSprite2D
 
 @onready var move_tween := create_tween()
 @onready var bounce_tween := create_tween()
+@onready var gortSound := preload('res://Assets/Sounds/Gort/zombie1.wav')
+@onready var audio_player := $AudioStreamPlayer2D
 
 func _ready() -> void:
 	play("walk")  #walk animation
@@ -28,3 +30,5 @@ func _on_bounce_complete():
 		play("idle")  #idle anim
 		#call the dialogue system singleton with desired aggression level
 		Dialogue.start_dialogue(Enums.AggressionLevel.PASSIVE, Enums.Customers.GORT)
+		audio_player.stream = gortSound
+		audio_player.play()
