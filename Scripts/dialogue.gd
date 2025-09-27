@@ -26,9 +26,6 @@ var monster_dialogues = {
 	}
 }
 
-func _ready():
-	call_deferred("setup_ui")
-
 func setup_ui():
 	print("Setting up dialogue UI...")
 	var scene_name = "NONE"
