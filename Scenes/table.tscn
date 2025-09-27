@@ -80,7 +80,7 @@ shape = SubResource("RectangleShape2D_4ntqo")
 position = Vector2(212.82826, 107.85822)
 
 [node name="Pan" parent="." instance=ExtResource("12_llvxf")]
-position = Vector2(83.15152, 106.85953)
+position = Vector2(94.04039, 109.85558)
 
 [node name="Pan2" parent="." instance=ExtResource("12_llvxf")]
-position = Vector2(83.15151, 259.65872)
+position = Vector2(94.040405, 255.66393)

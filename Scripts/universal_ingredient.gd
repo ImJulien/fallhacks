@@ -24,7 +24,7 @@ func _ready():
 	original_position = global_position
 	input_event.connect(_on_input_event)
 	
-	# Debug: Check if ingredient is set up correctly
+	#check if ingredient is set up correctly
 	print("=== INGREDIENT SETUP DEBUG ===")
 	print("Ingredient name: ", ingredient_name)
 	print("Has CollisionShape2D: ", get_node_or_null("CollisionShape2D") != null)
@@ -33,7 +33,7 @@ func _ready():
 	print("Z-index: ", z_index)
 	print("Script attached: ", get_script() != null)
 	
-	# Force this ingredient to have higher priority
+	#force this ingredient to have higher priority
 	z_index = 100
 	input_pickable = true
 
@@ -76,8 +76,9 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int):
 func start_drag(mouse_pos: Vector2):
 	print("start_drag called for ", ingredient_name, " at mouse pos: ", mouse_pos)
 	is_dragging = true
-	drag_offset = global_position - mouse_pos
-	z_index = 10  # Bring to front
+	#store the offset between ingredient and mouse
+	drag_offset = global_position - get_global_mouse_position()
+	z_index = 10  #bring to front
 	print("Dragging started, is_dragging: ", is_dragging, " z_index: ", z_index)
 
 func stop_drag():
@@ -132,6 +133,13 @@ func stop_drag():
 
 func _process(_delta):
 	if is_dragging:
+		#if left mouse button is not pressed, stop dragging
+		if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			print("Safety stop: Mouse button not pressed, stopping drag")
+			stop_drag()
+			return
+		
+		#follow mouse with stored offset
 		global_position = get_global_mouse_position() + drag_offset
 		update_hover_highlight()
 
