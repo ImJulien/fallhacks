@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctd57ff7486hk"]
+[gd_scene load_steps=5 format=3 uid="uid://hcf7nsub20q3"]
 
 [ext_resource type="Texture2D" uid="uid://bayqhsts7mlue" path="res://Assets/Sprites/Stove/stovetop.png" id="1_ix8et"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ppvu"]
 radius = 53.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ix8et"]
+size = Vector2(138, 283)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ppvu"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -56,3 +61,26 @@ texture = ExtResource("1_ix8et")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stove/Burner3/Area2D"]
 position = Vector2(119, 69)
 shape = SubResource("CircleShape2D_4ppvu")
+
+[node name="Conveyor" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Conveyor"]
+
+[node name="Area2D" type="Area2D" parent="Conveyor"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conveyor/Area2D"]
+position = Vector2(615, 160.5)
+shape = SubResource("RectangleShape2D_ix8et")
+
+[node name="PlatingAreaPlaceholder" type="ColorRect" parent="."]
+offset_left = 543.0
+offset_top = 337.0
+offset_right = 683.0
+offset_bottom = 477.0
+
+[node name="PlatingArea" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatingArea"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatingArea"]
+shape = SubResource("RectangleShape2D_4ppvu")
