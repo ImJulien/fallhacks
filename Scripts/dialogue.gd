@@ -9,7 +9,7 @@ var text_speed: float = 0.02  #time for scroll characters
 #dialogue for each monster and emotion level
 var monster_dialogues = {
 	Enums.Customers.GORT: {
-		Enums.AggressionLevel.PASSIVE: "I loveee Poke! Please give me the best bowl you could ever make.",
+		Enums.AggressionLevel.PASSIVE: "I loveee Poke! Please give me the best bowl you could ever make. I want 1 Cooked Salmon, 2 Raw Tuna, and 1 Corn.",
 		Enums.AggressionLevel.IRRITATED: "Could you focus up please? I'm really hungry for some Poke.",
 		Enums.AggressionLevel.AGITATED: "Seriously? Come on, focus! This isn't that complicated.",
 		Enums.AggressionLevel.AGGRESSIVE: "What is WRONG with you?! Just listen to what I'm saying!",
