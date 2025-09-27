@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 brightness="*res://Scripts/brightness.gd"
+Dialogue="*res://Scripts/dialogue.gd"
+Enums="*res://Scripts/enums.gd"
 
 [display]
 
