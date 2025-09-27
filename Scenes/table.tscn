@@ -1,82 +1,44 @@
-[gd_scene load_steps=15 format=3 uid="uid://b01i2a0u4gm43"]
+[gd_scene load_steps=7 format=3 uid="uid://b01i2a0u4gm43"]
 
-[ext_resource type="Texture2D" uid="uid://c1213f6ii571" path="res://Assets/Sprites/Coveyor Belt/tile000.png" id="2_4ntqo"]
-[ext_resource type="Texture2D" uid="uid://cv5atr4pgvekm" path="res://Assets/Sprites/Coveyor Belt/tile001.png" id="3_x0duj"]
-[ext_resource type="Texture2D" uid="uid://bufsaevehu74l" path="res://Assets/Sprites/Coveyor Belt/tile002.png" id="4_filji"]
-[ext_resource type="Texture2D" uid="uid://dqp3ounds28gr" path="res://Assets/Sprites/Coveyor Belt/tile003.png" id="5_llvxf"]
-[ext_resource type="Texture2D" uid="uid://chvn0dflos4ms" path="res://Assets/Sprites/Coveyor Belt/tile004.png" id="6_oi710"]
-[ext_resource type="Texture2D" uid="uid://ckjrttxpm0gc1" path="res://Assets/Sprites/Coveyor Belt/tile005.png" id="7_somge"]
-[ext_resource type="Texture2D" uid="uid://dyijcwuyxoj83" path="res://Assets/Sprites/Coveyor Belt/tile006.png" id="8_bxtnr"]
-[ext_resource type="Texture2D" uid="uid://coxfyoqryhb0t" path="res://Assets/Sprites/Coveyor Belt/tile007.png" id="9_k47uh"]
-[ext_resource type="Texture2D" uid="uid://bf11gmecx0put" path="res://Assets/Sprites/Coveyor Belt/tile008.png" id="10_xhfwg"]
+[ext_resource type="PackedScene" uid="uid://cqj4snpn33vy0" path="res://Scenes/conveyor.tscn" id="1_5cpa6"]
+[ext_resource type="Texture2D" uid="uid://d0x1jf08b6e2e" path="res://Assets/Sprites/Botdesk/Sprite-0003.png" id="6_usajj"]
 [ext_resource type="PackedScene" uid="uid://be5anygymy1g0" path="res://Scenes/tomato.tscn" id="11_filji"]
 [ext_resource type="Texture2D" uid="uid://fa5q0m6ypl5v" path="res://Assets/Sprites/Botdesk/DownTable.png" id="12_filji"]
 [ext_resource type="PackedScene" uid="uid://c0v4xyhafnvif" path="res://Scenes/pan.tscn" id="12_llvxf"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_5kx35"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_4ntqo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_x0duj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_filji")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_llvxf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_oi710")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_somge")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_bxtnr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_k47uh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_xhfwg")
-}],
-"loop": true,
-"name": &"default",
-"speed": 10.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3leha"]
+[ext_resource type="PackedScene" uid="uid://1hstysymwkb6" path="res://Scenes/burner.tscn" id="13_llvxf"]
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1.0102042, 1.0013145)
 
-[node name="Conveyor" type="Node2D" parent="."]
+[node name="Conveyor" parent="." instance=ExtResource("1_5cpa6")]
 position = Vector2(-4.949495, 0)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Conveyor"]
-position = Vector2(555.3333, 129.33032)
-scale = Vector2(0.8386641, 0.8842522)
-sprite_frames = SubResource("SpriteFrames_5kx35")
-frame_progress = 0.8279592
+[node name="Burner" parent="." instance=ExtResource("13_llvxf")]
+position = Vector2(81.1717, 102.864784)
+scale = Vector2(1, 0.99999994)
+priority = -1
 
-[node name="Area2D" type="Area2D" parent="Conveyor"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Conveyor/Area2D"]
-shape = SubResource("RectangleShape2D_3leha")
+[node name="Burner2" parent="." instance=ExtResource("13_llvxf")]
+position = Vector2(81.17169, 252.66798)
+scale = Vector2(1, 0.99999994)
+priority = -1
 
 [node name="Tomato" parent="." instance=ExtResource("11_filji")]
 position = Vector2(212.82826, 107.85822)
 
 [node name="Pan" parent="." instance=ExtResource("12_llvxf")]
 position = Vector2(86.04039, 75.03282)
+priority = 1
 
 [node name="Pan2" parent="." instance=ExtResource("12_llvxf")]
 position = Vector2(86.04039, 225.0328)
+priority = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(316.94955, 179.99869)
 texture = ExtResource("12_filji")
+
+[node name="Bowl" type="Sprite2D" parent="."]
+position = Vector2(318.74744, 226.702)
+texture = ExtResource("6_usajj")

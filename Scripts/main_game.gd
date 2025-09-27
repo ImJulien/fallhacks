@@ -9,9 +9,6 @@ func _ready():
 	camera_up_position = camera.position.y
 	#down position is one screen height below
 	camera_down_position = camera_up_position + get_viewport().get_visible_rect().size.y
-	
-	#debug ingredient and pan setup
-	call_deferred("debug_scene_setup")
 
 func _process(_delta):
 	if Input.is_action_just_pressed("Down"):
