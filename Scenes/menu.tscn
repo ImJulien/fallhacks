@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlwmxjjvq0h16"]
+[gd_scene load_steps=2 format=3 uid="uid://cipccpfdtdt2b"]
 
-[ext_resource type="Script" uid="uid://cctascyjsni3x" path="res://scripts/menu.gd" id="1_con2f"]
-[ext_resource type="FontFile" uid="uid://b6a2tepoixmtr" path="res://assets/fonts/NicoClean-Regular.ttf" id="2_con2f"]
-[ext_resource type="FontFile" uid="uid://1dx0sa3wlwoq" path="res://assets/fonts/NicoPups-Regular.ttf" id="3_mhnvy"]
+[ext_resource type="Script" uid="uid://dqmr0hcxhafeu" path="res://scripts/menu.gd" id="1_con2f"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -62,7 +60,6 @@ layout_mode = 2
 [node name="Title" type="RichTextLabel" parent="Windows/Margins/PlayWindow"]
 layout_mode = 2
 theme_override_constants/line_separation = 0
-theme_override_fonts/normal_font = ExtResource("2_con2f")
 text = "Play"
 fit_content = true
 
@@ -74,7 +71,6 @@ theme_override_constants/separation = 5
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("3_mhnvy")
 theme_override_font_sizes/font_size = 24
 text = "Online"
 
@@ -82,7 +78,6 @@ text = "Online"
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("3_mhnvy")
 theme_override_font_sizes/font_size = 24
 text = "Local"
 
@@ -90,13 +85,11 @@ text = "Local"
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("3_mhnvy")
 theme_override_font_sizes/font_size = 24
 text = "Splitscreen"
 
 [node name="Label" type="Label" parent="Windows/Margins/PlayWindow/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_mhnvy")
 text = "OR"
 horizontal_alignment = 1
 
@@ -104,7 +97,6 @@ horizontal_alignment = 1
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("3_mhnvy")
 theme_override_font_sizes/font_size = 24
 text = "Training Grounds"
 
@@ -117,7 +109,6 @@ layout_mode = 2
 
 [node name="Title" type="RichTextLabel" parent="Windows/Margins/OptionsWindow"]
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("2_con2f")
 text = "Options"
 fit_content = true
 
@@ -128,7 +119,6 @@ layout_mode = 2
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("3_mhnvy")
 theme_override_font_sizes/font_size = 24
 text = "General"
 
@@ -136,7 +126,6 @@ text = "General"
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("3_mhnvy")
 theme_override_font_sizes/font_size = 24
 text = "Controls"
 
@@ -144,7 +133,6 @@ text = "Controls"
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("3_mhnvy")
 theme_override_font_sizes/font_size = 24
 text = "Display"
 
@@ -154,7 +142,6 @@ layout_mode = 2
 
 [node name="Language" type="OptionButton" parent="Windows/Margins/OptionsWindow/General"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_mhnvy")
 theme_override_font_sizes/font_size = 16
 selected = 0
 item_count = 2
@@ -198,7 +185,6 @@ layout_mode = 2
 
 [node name="Title" type="RichTextLabel" parent="Windows/Margins/ChangelogWindow"]
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("2_con2f")
 text = "Changelog"
 fit_content = true
 
