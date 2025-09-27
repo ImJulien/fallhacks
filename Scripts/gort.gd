@@ -26,3 +26,5 @@ func _on_bounce_complete():
 	if abs(position.x - get_viewport_rect().size.x / 2) < 1:
 		bounce_tween.kill()  #stop bouncing the gyatt
 		play("idle")  #idle anim
+		#call the dialogue system singleton with desired aggression level
+		Dialogue.start_dialogue(Enums.AggressionLevel.PASSIVE, Enums.Customers.GORT)
