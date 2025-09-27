@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://hcf7nsub20q3"]
+[gd_scene load_steps=3 format=3 uid="uid://hcf7nsub20q3"]
+
+[ext_resource type="Texture2D" uid="uid://bayqhsts7mlue" path="res://Assets/Sprites/Stove/stovetop.png" id="1_ix8et"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ppvu"]
+radius = 53.0
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,33 +14,48 @@ offset_right = 704.0
 offset_bottom = 515.0
 color = Color(0.25637108, 0.12904409, 0, 1)
 
-[node name="ColorRect" type="ColorRect" parent="tbaleplaceholder"]
-layout_mode = 0
-offset_left = 97.0
-offset_top = 30.0
-offset_right = 205.0
-offset_bottom = 86.0
+[node name="Stove" type="Node2D" parent="."]
 
-[node name="ColorRect2" type="ColorRect" parent="tbaleplaceholder"]
-layout_mode = 0
-offset_left = 286.0
-offset_top = 166.0
-offset_right = 394.0
-offset_bottom = 222.0
-color = Color(0.756602, 0.42018205, 0.7581832, 1)
+[node name="Burner1" type="Node2D" parent="Stove"]
 
-[node name="ColorRect3" type="ColorRect" parent="tbaleplaceholder"]
-layout_mode = 0
-offset_left = 503.0
-offset_top = 260.0
-offset_right = 611.0
-offset_bottom = 316.0
-color = Color(0.22312784, 0.6832753, 0.61487883, 1)
+[node name="Sprite2D" type="Sprite2D" parent="Stove/Burner1"]
+position = Vector2(119, 69)
+texture = ExtResource("1_ix8et")
 
-[node name="ColorRect4" type="ColorRect" parent="tbaleplaceholder"]
-layout_mode = 0
-offset_left = 295.0
-offset_top = 394.0
-offset_right = 403.0
-offset_bottom = 450.0
-color = Color(0.756602, 0.42018205, 0.7581832, 1)
+[node name="Area2D" type="Area2D" parent="Stove/Burner1"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stove/Burner1/Area2D"]
+visible = false
+position = Vector2(118, 70)
+shape = SubResource("CircleShape2D_4ppvu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stove"]
+
+[node name="Burner2" type="Node2D" parent="Stove"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Stove/Burner2"]
+position = Vector2(119, 69)
+texture = ExtResource("1_ix8et")
+
+[node name="Area2D" type="Area2D" parent="Stove/Burner2"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stove/Burner2/Area2D"]
+visible = false
+position = Vector2(118, 70)
+shape = SubResource("CircleShape2D_4ppvu")
+
+[node name="Burner3" type="Node2D" parent="Stove"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Stove/Burner3"]
+position = Vector2(119, 69)
+texture = ExtResource("1_ix8et")
+
+[node name="Area2D" type="Area2D" parent="Stove/Burner3"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stove/Burner3/Area2D"]
+visible = false
+position = Vector2(118, 70)
+shape = SubResource("CircleShape2D_4ppvu")
