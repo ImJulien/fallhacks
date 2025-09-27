@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/show_image=false
 config/icon="res://icon.svg"
 
+[autoload]
+
+brightness="*res://Scripts/brightness.gd"
+
 [display]
 
 window/size/viewport_width=640
