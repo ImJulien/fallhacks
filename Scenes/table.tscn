@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b01i2a0u4gm43"]
 
 [ext_resource type="PackedScene" uid="uid://cqj4snpn33vy0" path="res://Scenes/conveyor.tscn" id="1_5cpa6"]
-[ext_resource type="Texture2D" uid="uid://d0x1jf08b6e2e" path="res://Assets/Sprites/Botdesk/Sprite-0003.png" id="6_usajj"]
+[ext_resource type="Texture2D" uid="uid://bain8bhk5cb13" path="res://Assets/Sprites/Stove/Scpoké.png" id="6_usajj"]
 [ext_resource type="PackedScene" uid="uid://be5anygymy1g0" path="res://Scenes/tomato.tscn" id="11_filji"]
 [ext_resource type="Texture2D" uid="uid://fa5q0m6ypl5v" path="res://Assets/Sprites/Botdesk/DownTable.png" id="12_filji"]
 [ext_resource type="PackedScene" uid="uid://c0v4xyhafnvif" path="res://Scenes/pan.tscn" id="12_llvxf"]
