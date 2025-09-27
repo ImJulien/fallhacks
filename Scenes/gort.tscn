@@ -1,23 +1,38 @@
-[gd_scene load_steps=6 format=3 uid="uid://onkxowxq311w"]
+[gd_scene load_steps=9 format=3 uid="uid://onkxowxq311w"]
 
-[ext_resource type="Texture2D" uid="uid://rjed8v0r76s1" path="res://Assets/Sprites/Gort/Gort.png" id="1_vej8r"]
-[ext_resource type="Texture2D" uid="uid://b46nuqdsi72nc" path="res://Assets/Sprites/Gort/Gort walk.png" id="2_31evh"]
+[ext_resource type="Texture2D" uid="uid://dt7l847n1jbax" path="res://Assets/Sprites/Gort/tile000.png" id="1_txy2e"]
 [ext_resource type="Script" uid="uid://b23mkrikqw85c" path="res://Scripts/gort.gd" id="2_78agy"]
+[ext_resource type="Texture2D" uid="uid://dlx8ljbollb7i" path="res://Assets/Sprites/Gort/tile001.png" id="2_jngie"]
+[ext_resource type="Texture2D" uid="uid://cmslo365ekrcf" path="res://Assets/Sprites/Gort/tile002.png" id="3_52bfe"]
 [ext_resource type="FontFile" uid="uid://cksnw3iylvwaj" path="res://Assets/Fonts/Ruler 9.ttf" id="4_31evh"]
+[ext_resource type="Texture2D" uid="uid://c6rgy8004oulr" path="res://Assets/Sprites/Gort/tile003.png" id="4_srune"]
+[ext_resource type="Texture2D" uid="uid://beovo2fyet51v" path="res://Assets/Sprites/Gort/tile004.png" id="5_eegtq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e40sh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_vej8r")
+"texture": ExtResource("1_txy2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jngie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_52bfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_srune")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_eegtq")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_31evh")
+"texture": ExtResource("1_txy2e")
 }],
 "loop": true,
 "name": &"walk",
