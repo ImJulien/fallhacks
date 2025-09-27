@@ -7,11 +7,6 @@ extends Control
 @onready var controls_tab = $Windows/Margins/OptionsWindow/Controls
 @onready var display_tab = $Windows/Margins/OptionsWindow/Display
 
-@onready var desk = $TableUp
-
-func _ready() -> void:
-	desk.play()
-
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main_game.tscn")
 

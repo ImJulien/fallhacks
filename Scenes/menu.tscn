@@ -105,7 +105,7 @@ script = ExtResource("1_con2f")
 z_index = -1
 position = Vector2(320, 180)
 sprite_frames = SubResource("SpriteFrames_cayip")
-frame_progress = 0.71218646
+frame_progress = 0.28464824
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -2
