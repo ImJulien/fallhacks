@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cipccpfdtdt2b"]
+[gd_scene load_steps=4 format=3 uid="uid://cipccpfdtdt2b"]
 
 [ext_resource type="Script" uid="uid://dqmr0hcxhafeu" path="res://Scripts/menu.gd" id="1_con2f"]
+[ext_resource type="FontFile" uid="uid://cksnw3iylvwaj" path="res://Assets/Fonts/Ruler 9.ttf" id="2_cayip"]
 [ext_resource type="Script" uid="uid://dhgmaxswxfjuo" path="res://Scripts/brightness.gd" id="2_xhh6f"]
 
 [node name="Menu" type="Control"]
@@ -28,14 +29,17 @@ layout_mode = 2
 
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cayip")
 text = "Play"
 
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cayip")
 text = "Options"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cayip")
 text = "Quit"
 
 [node name="Windows" type="Panel" parent="."]
@@ -60,6 +64,7 @@ layout_mode = 2
 
 [node name="Title" type="RichTextLabel" parent="Windows/Margins/OptionsWindow"]
 layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_cayip")
 text = "Options"
 fit_content = true
 
@@ -70,6 +75,7 @@ layout_mode = 2
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_cayip")
 theme_override_font_sizes/font_size = 24
 text = "General"
 
@@ -77,6 +83,7 @@ text = "General"
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_cayip")
 theme_override_font_sizes/font_size = 24
 text = "Controls"
 
@@ -84,6 +91,7 @@ text = "Controls"
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_cayip")
 theme_override_font_sizes/font_size = 24
 text = "Display"
 
@@ -93,6 +101,7 @@ layout_mode = 2
 
 [node name="Language" type="OptionButton" parent="Windows/Margins/OptionsWindow/General"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cayip")
 theme_override_font_sizes/font_size = 16
 selected = 0
 item_count = 2
@@ -110,9 +119,11 @@ layout_mode = 2
 
 [node name="Aspect Ratio" type="OptionButton" parent="Windows/Margins/OptionsWindow/Display"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cayip")
 
 [node name="Resolution" type="OptionButton" parent="Windows/Margins/OptionsWindow/Display"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cayip")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Windows/Margins/OptionsWindow/Display"]
 layout_mode = 2
@@ -121,6 +132,7 @@ size_flags_stretch_ratio = 0.0
 [node name="Label" type="Label" parent="Windows/Margins/OptionsWindow/Display/HBoxContainer"]
 layout_direction = 2
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cayip")
 text = "Brightness"
 vertical_alignment = 1
 
@@ -137,6 +149,7 @@ layout_mode = 2
 
 [node name="Title" type="RichTextLabel" parent="Windows/Margins/ChangelogWindow"]
 layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_cayip")
 text = "Changelog"
 fit_content = true
 
