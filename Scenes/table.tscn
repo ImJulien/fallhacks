@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b01i2a0u4gm43"]
+[gd_scene load_steps=8 format=3 uid="uid://b01i2a0u4gm43"]
 
 [ext_resource type="PackedScene" uid="uid://cqj4snpn33vy0" path="res://Scenes/conveyor.tscn" id="1_5cpa6"]
-[ext_resource type="Texture2D" uid="uid://d0x1jf08b6e2e" path="res://Assets/Sprites/Botdesk/Sprite-0003.png" id="6_usajj"]
+[ext_resource type="Script" uid="uid://bfdothimm0w4d" path="res://Scripts/conveyor.gd" id="2_usajj"]
+[ext_resource type="Texture2D" uid="uid://bain8bhk5cb13" path="res://Assets/Sprites/Stove/Scpoké.png" id="6_5cpa6"]
 [ext_resource type="PackedScene" uid="uid://be5anygymy1g0" path="res://Scenes/tomato.tscn" id="11_filji"]
 [ext_resource type="Texture2D" uid="uid://fa5q0m6ypl5v" path="res://Assets/Sprites/Botdesk/DownTable.png" id="12_filji"]
 [ext_resource type="PackedScene" uid="uid://c0v4xyhafnvif" path="res://Scenes/pan.tscn" id="12_llvxf"]
@@ -12,6 +13,7 @@ scale = Vector2(1.0102042, 1.0013145)
 
 [node name="Conveyor" parent="." instance=ExtResource("1_5cpa6")]
 position = Vector2(-4.949495, 0)
+script = ExtResource("2_usajj")
 
 [node name="Burner" parent="." instance=ExtResource("13_llvxf")]
 position = Vector2(81.1717, 102.864784)
@@ -41,4 +43,4 @@ texture = ExtResource("12_filji")
 
 [node name="Bowl" type="Sprite2D" parent="."]
 position = Vector2(318.74744, 226.702)
-texture = ExtResource("6_usajj")
+texture = ExtResource("6_5cpa6")
