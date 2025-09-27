@@ -1,0 +1,211 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlwmxjjvq0h16"]
+
+[ext_resource type="Script" uid="uid://cctascyjsni3x" path="res://scripts/menu.gd" id="1_con2f"]
+[ext_resource type="FontFile" uid="uid://b6a2tepoixmtr" path="res://assets/fonts/NicoClean-Regular.ttf" id="2_con2f"]
+[ext_resource type="FontFile" uid="uid://1dx0sa3wlwoq" path="res://assets/fonts/NicoPups-Regular.ttf" id="3_mhnvy"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_con2f")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -53.0
+offset_right = 207.0
+offset_bottom = 53.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="Windows" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 48.0
+offset_right = 606.0
+offset_bottom = 377.0
+
+[node name="Margins" type="MarginContainer" parent="Windows"]
+layout_mode = 0
+offset_right = 370.0
+offset_bottom = 329.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="PlayWindow" type="VBoxContainer" parent="Windows/Margins"]
+visible = false
+layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="Windows/Margins/PlayWindow"]
+layout_mode = 2
+theme_override_constants/line_separation = 0
+theme_override_fonts/normal_font = ExtResource("2_con2f")
+text = "Play"
+fit_content = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Windows/Margins/PlayWindow"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Online" type="Button" parent="Windows/Margins/PlayWindow/VBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_mhnvy")
+theme_override_font_sizes/font_size = 24
+text = "Online"
+
+[node name="Local" type="Button" parent="Windows/Margins/PlayWindow/VBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_mhnvy")
+theme_override_font_sizes/font_size = 24
+text = "Local"
+
+[node name="Splitscreen" type="Button" parent="Windows/Margins/PlayWindow/VBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_mhnvy")
+theme_override_font_sizes/font_size = 24
+text = "Splitscreen"
+
+[node name="Label" type="Label" parent="Windows/Margins/PlayWindow/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_mhnvy")
+text = "OR"
+horizontal_alignment = 1
+
+[node name="Training" type="Button" parent="Windows/Margins/PlayWindow/VBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_mhnvy")
+theme_override_font_sizes/font_size = 24
+text = "Training Grounds"
+
+[node name="MarginContainer" type="MarginContainer" parent="Windows/Margins/PlayWindow/VBoxContainer"]
+layout_mode = 2
+
+[node name="OptionsWindow" type="VBoxContainer" parent="Windows/Margins"]
+visible = false
+layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="Windows/Margins/OptionsWindow"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_con2f")
+text = "Options"
+fit_content = true
+
+[node name="Tabs" type="HBoxContainer" parent="Windows/Margins/OptionsWindow"]
+layout_mode = 2
+
+[node name="General" type="Button" parent="Windows/Margins/OptionsWindow/Tabs"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_mhnvy")
+theme_override_font_sizes/font_size = 24
+text = "General"
+
+[node name="Controls" type="Button" parent="Windows/Margins/OptionsWindow/Tabs"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_mhnvy")
+theme_override_font_sizes/font_size = 24
+text = "Controls"
+
+[node name="Display" type="Button" parent="Windows/Margins/OptionsWindow/Tabs"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_mhnvy")
+theme_override_font_sizes/font_size = 24
+text = "Display"
+
+[node name="General" type="VBoxContainer" parent="Windows/Margins/OptionsWindow"]
+visible = false
+layout_mode = 2
+
+[node name="Language" type="OptionButton" parent="Windows/Margins/OptionsWindow/General"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_mhnvy")
+theme_override_font_sizes/font_size = 16
+selected = 0
+item_count = 2
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "French"
+popup/item_1/id = 1
+
+[node name="Controls" type="VBoxContainer" parent="Windows/Margins/OptionsWindow"]
+visible = false
+layout_mode = 2
+
+[node name="Display" type="VBoxContainer" parent="Windows/Margins/OptionsWindow"]
+layout_mode = 2
+
+[node name="Aspect Ratio" type="OptionButton" parent="Windows/Margins/OptionsWindow/Display"]
+layout_mode = 2
+
+[node name="Resolution" type="OptionButton" parent="Windows/Margins/OptionsWindow/Display"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Margins/OptionsWindow/Display"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="Windows/Margins/OptionsWindow/Display/HBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+text = "Brightness"
+vertical_alignment = 1
+
+[node name="Brightness" type="HSlider" parent="Windows/Margins/OptionsWindow/Display/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_direction = 3
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="ChangelogWindow" type="VBoxContainer" parent="Windows/Margins"]
+layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="Windows/Margins/ChangelogWindow"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_con2f")
+text = "Changelog"
+fit_content = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Windows/Margins/PlayWindow/VBoxContainer/Training" to="." method="_on_training_pressed"]
+[connection signal="pressed" from="Windows/Margins/OptionsWindow/Tabs/General" to="." method="_on_general_pressed"]
+[connection signal="pressed" from="Windows/Margins/OptionsWindow/Tabs/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Windows/Margins/OptionsWindow/Tabs/Display" to="." method="_on_display_pressed"]
