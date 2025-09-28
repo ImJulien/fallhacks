@@ -2,6 +2,7 @@ extends AnimatedSprite2D
 
 @onready var move_tween := create_tween()
 @onready var bounce_tween := create_tween()
+@onready var jumpscare_sound := preload('res://Assets/Sounds/Gort/zombie1.wav')
 
 var is_talking: bool = false
 
@@ -33,6 +34,8 @@ func _on_bounce_complete():
 		#call the dialogue system singleton with desired aggression level
 		is_talking = true
 		Dialogue.start_dialogue(Enums.AggressionLevel.PASSIVE, Enums.Customers.GORT)
+		$AudioStreamPlayer2D.stream = jumpscare_sound
+		$AudioStreamPlayer2D.play()
 
 func stop_talking():
 	is_talking = false

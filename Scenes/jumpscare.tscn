@@ -1,0 +1,110 @@
+[gd_scene load_steps=26 format=3 uid="uid://drrukdcqys2cp"]
+
+[ext_resource type="Texture2D" uid="uid://bi1babpsmcx3n" path="res://Assets/Sprites/Jumpscare/tile000.png" id="1_n6c3n"]
+[ext_resource type="Texture2D" uid="uid://do7lijgldewv" path="res://Assets/Sprites/Jumpscare/tile001.png" id="2_3yafs"]
+[ext_resource type="Texture2D" uid="uid://d3uhwkq5msuvj" path="res://Assets/Sprites/Jumpscare/tile002.png" id="3_lrg37"]
+[ext_resource type="Texture2D" uid="uid://d3ca8jjx5ad1" path="res://Assets/Sprites/Jumpscare/tile003.png" id="4_6w645"]
+[ext_resource type="Texture2D" uid="uid://c5y0ms5dpve0l" path="res://Assets/Sprites/Jumpscare/tile004.png" id="5_84pbi"]
+[ext_resource type="Texture2D" uid="uid://dk7he385l1nhs" path="res://Assets/Sprites/Jumpscare/tile005.png" id="6_q67pc"]
+[ext_resource type="Texture2D" uid="uid://dmfn054po7jq5" path="res://Assets/Sprites/Jumpscare/tile006.png" id="7_iqlw5"]
+[ext_resource type="Texture2D" uid="uid://cjgdy38x4fw5f" path="res://Assets/Sprites/Jumpscare/tile007.png" id="8_q75a0"]
+[ext_resource type="Texture2D" uid="uid://bnutcceucsdd3" path="res://Assets/Sprites/Jumpscare/tile008.png" id="9_ckrww"]
+[ext_resource type="Texture2D" uid="uid://dflbc0fovf4pq" path="res://Assets/Sprites/Jumpscare/tile009.png" id="10_c7yjf"]
+[ext_resource type="Texture2D" uid="uid://cuqed5e5804ib" path="res://Assets/Sprites/Jumpscare/tile010.png" id="11_d5hmr"]
+[ext_resource type="Texture2D" uid="uid://5i1m1lyg6qyw" path="res://Assets/Sprites/Jumpscare/tile011.png" id="12_uc0hd"]
+[ext_resource type="Texture2D" uid="uid://cao2ytstipnut" path="res://Assets/Sprites/Jumpscare/tile012.png" id="13_tmpm3"]
+[ext_resource type="Texture2D" uid="uid://csg8fggnrg8fa" path="res://Assets/Sprites/Jumpscare/tile013.png" id="14_65s3k"]
+[ext_resource type="Texture2D" uid="uid://bexhyi35nu1y5" path="res://Assets/Sprites/Jumpscare/tile014.png" id="15_bp62n"]
+[ext_resource type="Texture2D" uid="uid://6dfshjj4nvtx" path="res://Assets/Sprites/Jumpscare/tile015.png" id="16_w3xtf"]
+[ext_resource type="Texture2D" uid="uid://cnt4subfre0gx" path="res://Assets/Sprites/Jumpscare/tile016.png" id="17_muwjb"]
+[ext_resource type="Texture2D" uid="uid://dyqmb6iwc051e" path="res://Assets/Sprites/Jumpscare/tile017.png" id="18_arws5"]
+[ext_resource type="Texture2D" uid="uid://bdugghue1wne6" path="res://Assets/Sprites/Jumpscare/tile018.png" id="19_4h13u"]
+[ext_resource type="Texture2D" uid="uid://cqseakuikipkb" path="res://Assets/Sprites/Jumpscare/tile019.png" id="20_twf4q"]
+[ext_resource type="Texture2D" uid="uid://c5v20j0cpk0eh" path="res://Assets/Sprites/Jumpscare/tile020.png" id="21_tvbr3"]
+[ext_resource type="Texture2D" uid="uid://bt7pmkkkp74ix" path="res://Assets/Sprites/Jumpscare/tile021.png" id="22_t60e0"]
+[ext_resource type="Texture2D" uid="uid://c1qadsm6v6pyv" path="res://Assets/Sprites/Jumpscare/tile022.png" id="23_v244j"]
+[ext_resource type="Texture2D" uid="uid://c663nriutx36c" path="res://Assets/Sprites/Jumpscare/tile023.png" id="24_olym2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oih2u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_n6c3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3yafs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lrg37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6w645")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_84pbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q67pc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iqlw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q75a0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ckrww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_c7yjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d5hmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_uc0hd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tmpm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_65s3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bp62n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_w3xtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_muwjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_arws5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4h13u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_twf4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_tvbr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_t60e0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_v244j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_olym2")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Jumpscare" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_oih2u")
+speed_scale = 5.0
