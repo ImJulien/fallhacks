@@ -127,9 +127,8 @@ func stop_drag():
 				dropped_on_pan = true
 				#make sure ingredient stays exactly where dropped
 				global_position = drop_position
-				#connect to pan's cooking_finished signal and store reference
+				#store reference to pan but don't connect to signal (pan will handle burning directly)
 				connected_pan = collider
-				collider.cooking_finished.connect(_on_cooking_finished)
 				print("dropped on pan at position: ", drop_position)
 				return  #ingredient is now cooking on pan
 			break
@@ -208,14 +207,14 @@ func update_hover_highlight():
 	#visual highlighting
 	if over_pan and current_state == IngredientState.FRESH:
 		modulate = Color.GREEN
-		print("Highlighting ingredient green")
 	elif current_state == IngredientState.FRESH:
 		modulate = Color.WHITE
 	elif current_state == IngredientState.COOKING:
+		modulate = Color.YELLOW  #keep yellow while dragging
+	elif current_state == IngredientState.COOKED:
 		modulate = Color.ORANGE  #keep orange while dragging
 	elif current_state == IngredientState.BURNT:
-		modulate = Color(0.3, 0.2, 0.1)  #keep burnt color while dragging
-	#don't change color for non-fresh ingredients
+		modulate = Color.BLACK  #keep burnt color while dragging
 
 func get_ingredient_name() -> String:
 	return ingredient_name
@@ -224,7 +223,7 @@ func set_cooking(cooking: bool):
 	is_cooking = cooking
 	if cooking:
 		change_state(IngredientState.COOKING, "dropped on pan")
-		modulate = Color.ORANGE  #show it's cooking
+		modulate = Color.YELLOW  #show it's cooking
 	else:
 		modulate = Color.WHITE
 
@@ -239,14 +238,14 @@ func stop_cooking():
 		
 		#don't change state, keep it as COOKING but paused
 		print("paused cooking (removed from pan)")
-		#keep orange color to show it's still in cooking state
-		modulate = Color.ORANGE
+		#keep yellow color to show it's still in cooking state
+		modulate = Color.YELLOW
 
 func set_burnt():
 	is_cooking = false  #no longer actively cooking
 	is_burnt_food = true  #mark as burnt
 	change_state(IngredientState.BURNT, "cooking timer finished")
-	modulate = Color(0.3, 0.2, 0.1)  #dark brown/black burnt color
+	modulate = Color.BLACK  #burnt color
 
 func is_burnt() -> bool:
 	return is_burnt_food

@@ -1,12 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://b01i2a0u4gm43"]
+[gd_scene load_steps=14 format=3 uid="uid://b01i2a0u4gm43"]
 
 [ext_resource type="PackedScene" uid="uid://cqj4snpn33vy0" path="res://Scenes/conveyor.tscn" id="1_5cpa6"]
 [ext_resource type="Texture2D" uid="uid://cjsy1nvst631y" path="res://Assets/Sprites/Stove/Scpoké.png" id="6_usajj"]
-[ext_resource type="Script" path="res://Scenes/edamame_bucket.gd" id="7_usajj"]
-[ext_resource type="Script" path="res://Scenes/corn_bucket.gd" id="8_o4lkm"]
-[ext_resource type="Script" path="res://Scenes/salmon_bucket.gd" id="9_4ntqo"]
-[ext_resource type="Script" path="res://Scenes/tuna_bucket.gd" id="10_x0duj"]
-[ext_resource type="PackedScene" uid="uid://be5anygymy1g0" path="res://Scenes/tomato.tscn" id="11_filji"]
+[ext_resource type="Script" uid="uid://br2x44jwlbbhy" path="res://Scenes/edamame_bucket.gd" id="7_usajj"]
+[ext_resource type="Script" uid="uid://g6yau4vwjyaq" path="res://Scenes/corn_bucket.gd" id="8_o4lkm"]
+[ext_resource type="Script" uid="uid://daq8nrkyvx8a0" path="res://Scenes/salmon_bucket.gd" id="9_4ntqo"]
+[ext_resource type="Script" uid="uid://bn38ulcwajx6x" path="res://Scenes/tuna_bucket.gd" id="10_x0duj"]
 [ext_resource type="Texture2D" uid="uid://fa5q0m6ypl5v" path="res://Assets/Sprites/Botdesk/DownTable.png" id="12_filji"]
 [ext_resource type="PackedScene" uid="uid://c0v4xyhafnvif" path="res://Scenes/pan.tscn" id="12_llvxf"]
 [ext_resource type="PackedScene" uid="uid://1hstysymwkb6" path="res://Scenes/burner.tscn" id="13_llvxf"]
@@ -38,9 +37,6 @@ priority = -1
 position = Vector2(81.17169, 252.66798)
 scale = Vector2(1, 0.99999994)
 priority = -1
-
-[node name="Tomato" parent="." instance=ExtResource("11_filji")]
-position = Vector2(212.82826, 107.85822)
 
 [node name="Pan" parent="." instance=ExtResource("12_llvxf")]
 position = Vector2(86.04039, 75.03282)
