@@ -23,6 +23,14 @@ func _process(_delta):
 		var tween_down := create_tween()
 		tween_down.tween_property(camera, "position:y", camera_up_position, 0.3).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 		tween_down.play()
+	if Input.is_action_just_pressed("Jumpscare"):
+		var js_scene = preload("res://Scenes/jumpscare.tscn")
+		var gort = $Gort
+		var js: AnimatedSprite2D = js_scene.instantiate()
+		js.global_position = Vector2(get_viewport().get_visible_rect().size.x/2, get_viewport().get_visible_rect().size.y/2)
+		gort.visible = false
+		self.add_child(js)
+		js.play()
 
 #func calc_perf(ingredients: Array[Ingredient]):
 	# calculate the final perfection of the dish
