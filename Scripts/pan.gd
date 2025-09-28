@@ -117,11 +117,29 @@ func get_cooking_progress() -> float:
 func remove_ingredient(ingredient_name: String):
 	if ingredients_in_pan.has(ingredient_name):
 		var index = ingredients_in_pan.find(ingredient_name)
+		
+		# Stop the individual timers for this specific ingredient
+		if index >= 0 and index < cooking_timers.size():
+			var timer_set = cooking_timers[index]
+			if timer_set[0]:  # start cooking timer
+				timer_set[0].stop()
+				timer_set[0].queue_free()
+			if timer_set[1]:  # cooked timer
+				timer_set[1].stop()
+				timer_set[1].queue_free()
+			if timer_set[2]:  # burnt timer
+				timer_set[2].stop()
+				timer_set[2].queue_free()
+			
+			# Remove the timer set from the array
+			cooking_timers.remove_at(index)
+		
+		# Remove from ingredient arrays
 		ingredients_in_pan.erase(ingredient_name)
-		#remove from ingredient_nodes array at the same index
 		if index >= 0 and index < ingredient_nodes.size():
 			ingredient_nodes.remove_at(index)
-		print("Removed ", ingredient_name, " from pan")
+		
+		print("Removed ", ingredient_name, " from pan and stopped its timers")
 		
 		#if no ingredients left, stop cooking
 		if ingredients_in_pan.is_empty():

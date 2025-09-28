@@ -62,6 +62,12 @@ func get_state_name(state: IngredientState) -> String:
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int):
 	print("Ingredient ", ingredient_name, " received input: ", event)
+	
+	# Check if ingredient is locked (not pickable)
+	if not input_pickable:
+		print("Ingredient ", ingredient_name, " is locked in container - ignoring input")
+		return
+	
 	#you can drag ingredients in any state
 	if event is InputEventMouseButton:
 		print("Mouse button event: ", event.button_index, " pressed: ", event.pressed)
@@ -75,17 +81,35 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int):
 
 func start_drag(mouse_pos: Vector2):
 	print("start_drag called for ", ingredient_name, " at mouse pos: ", mouse_pos)
+	
+	# Double-check if ingredient is locked (shouldn't be able to drag if input_pickable is false)
+	if not input_pickable:
+		print("Ingredient ", ingredient_name, " is locked - cannot start drag")
+		return
+	
+	# Check if any bowl prevents dragging this ingredient
+	var space_state = get_world_2d().direct_space_state
+	var query = PhysicsPointQueryParameters2D.new()
+	query.position = global_position
+	query.collide_with_areas = true
+	query.collide_with_bodies = true
+	
+	var results = space_state.intersect_point(query)
+	for result in results:
+		var collider = result.collider
+		if collider != self and collider.has_method("should_prevent_ingredient_drag"):
+			if collider.should_prevent_ingredient_drag(self):
+				print("Dragging prevented by bowl: ", collider.name)
+				return  # Don't start dragging
+	
 	is_dragging = true
 	#store the offset between ingredient and mouse
 	drag_offset = global_position - get_global_mouse_position()
 	z_index = 10  #bring to front
 	
-	#if ingredient is cooking, stop cooking immediately when dragging starts
-	if current_state == IngredientState.COOKING and connected_pan:
-		print("Ingredient was cooking, stopping cooking due to drag")
-		#tell the pan to stop cooking this ingredient
-		if connected_pan.has_method("remove_ingredient"):
-			connected_pan.remove_ingredient(ingredient_name)
+	#if ingredient is cooking or cooked, stop cooking immediately when dragging starts
+	if (current_state == IngredientState.COOKING or current_state == IngredientState.COOKED) and connected_pan:
+		print("Ingredient was cooking/cooked, stopping cooking due to drag")
 		stop_cooking()
 	
 	print("Dragging started, is_dragging: ", is_dragging, " z_index: ", z_index)
@@ -216,6 +240,14 @@ func update_hover_highlight():
 	elif current_state == IngredientState.BURNT:
 		modulate = Color.BLACK  #keep burnt color while dragging
 
+# Add unhandled input check to ensure locked ingredients don't respond
+func _unhandled_input(_event: InputEvent):
+	# If ingredient is not input_pickable (locked in bowl), don't handle any input
+	if not input_pickable:
+		return
+	
+	# Let other input handling continue normally for draggable ingredients
+
 func get_ingredient_name() -> String:
 	return ingredient_name
 
@@ -228,18 +260,27 @@ func set_cooking(cooking: bool):
 		modulate = Color.WHITE
 
 func stop_cooking():
-	if current_state == IngredientState.COOKING:
+	if current_state == IngredientState.COOKING or current_state == IngredientState.COOKED:
 		is_cooking = false
+		
+		# Tell the pan to remove this ingredient and stop its timers
+		if connected_pan and connected_pan.has_method("remove_ingredient"):
+			connected_pan.remove_ingredient(ingredient_name)
+		
 		#disconnect from pan's cooking_finished signal to prevent turning burnt
 		if connected_pan and connected_pan.has_signal("cooking_finished"):
 			if connected_pan.cooking_finished.is_connected(_on_cooking_finished):
 				connected_pan.cooking_finished.disconnect(_on_cooking_finished)
-			connected_pan = null
 		
-		#don't change state, keep it as COOKING but paused
-		print("paused cooking (removed from pan)")
-		#keep yellow color to show it's still in cooking state
-		modulate = Color.YELLOW
+		connected_pan = null
+		
+		# Handle state preservation based on current state
+		if current_state == IngredientState.COOKED:
+			print("Cooked ingredient removed from pan - staying cooked")
+			modulate = Color.ORANGE  # Keep orange color for cooked
+		else:
+			print("Cooking ingredient paused (removed from pan)")
+			modulate = Color.YELLOW  # Keep yellow color for paused cooking
 
 func set_burnt():
 	is_cooking = false  #no longer actively cooking
