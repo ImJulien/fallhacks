@@ -1,12 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://b01i2a0u4gm43"]
+[gd_scene load_steps=14 format=3 uid="uid://b01i2a0u4gm43"]
 
 [ext_resource type="PackedScene" uid="uid://cqj4snpn33vy0" path="res://Scenes/conveyor.tscn" id="1_5cpa6"]
-[ext_resource type="Texture2D" uid="uid://bohaq54b7vkey" path="res://Assets/Sprites/Stove/ScpokéFILL.png" id="5_xexre"]
-[ext_resource type="Script" path="res://Scenes/edamame_bucket.gd" id="7_usajj"]
-[ext_resource type="Script" path="res://Scenes/corn_bucket.gd" id="8_o4lkm"]
-[ext_resource type="Script" path="res://Scenes/salmon_bucket.gd" id="9_4ntqo"]
-[ext_resource type="Script" uid="uid://csgq52x4uxvdp" path="res://Scenes/bowl.gd" id="10_filji"]
-[ext_resource type="Script" path="res://Scenes/tuna_bucket.gd" id="10_x0duj"]
+[ext_resource type="Texture2D" uid="uid://cjsy1nvst631y" path="res://Assets/Sprites/Stove/Scpoké.png" id="6_usajj"]
+[ext_resource type="Script" uid="uid://br2x44jwlbbhy" path="res://Scenes/edamame_bucket.gd" id="7_usajj"]
+[ext_resource type="Script" uid="uid://g6yau4vwjyaq" path="res://Scenes/corn_bucket.gd" id="8_o4lkm"]
+[ext_resource type="Script" uid="uid://daq8nrkyvx8a0" path="res://Scenes/salmon_bucket.gd" id="9_4ntqo"]
+[ext_resource type="Script" uid="uid://bn38ulcwajx6x" path="res://Scenes/tuna_bucket.gd" id="10_x0duj"]
 [ext_resource type="Texture2D" uid="uid://fa5q0m6ypl5v" path="res://Assets/Sprites/Botdesk/DownTable.png" id="12_filji"]
 [ext_resource type="PackedScene" uid="uid://c0v4xyhafnvif" path="res://Scenes/pan.tscn" id="12_llvxf"]
 [ext_resource type="PackedScene" uid="uid://1hstysymwkb6" path="res://Scenes/burner.tscn" id="13_llvxf"]
@@ -22,9 +21,6 @@ size = Vector2(69.29302, 64.91472)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_filji"]
 size = Vector2(93.05051, 41.944824)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_llvxf"]
-size = Vector2(76.22223, 45.95276)
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(1.0102042, 1.0013145)
@@ -54,6 +50,10 @@ priority = 1
 z_index = -1
 position = Vector2(316.94955, 179.99869)
 texture = ExtResource("12_filji")
+
+[node name="Bowl" type="Sprite2D" parent="."]
+position = Vector2(318.74744, 226.702)
+texture = ExtResource("6_usajj")
 
 [node name="EdamameBucket" type="Node2D" parent="."]
 script = ExtResource("7_usajj")
@@ -107,21 +107,3 @@ shape = SubResource("RectangleShape2D_x0duj")
 position = Vector2(547.41406, 339.5536)
 scale = Vector2(1, 0.9999998)
 shape = SubResource("RectangleShape2D_filji")
-
-[node name="Bowl" type="Node2D" parent="."]
-position = Vector2(318.74744, 226.70198)
-scale = Vector2(1, 0.99999994)
-script = ExtResource("10_filji")
-
-[node name="Sprite2D" type="Sprite2D" parent="Bowl"]
-position = Vector2(0, 1.5258789e-05)
-scale = Vector2(1, 1.0000001)
-texture = ExtResource("5_xexre")
-
-[node name="Area2D" type="Area2D" parent="Bowl"]
-position = Vector2(0.9898987, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bowl/Area2D"]
-position = Vector2(-2.474762, 16.971146)
-scale = Vector2(1, 0.99999934)
-shape = SubResource("RectangleShape2D_llvxf")
